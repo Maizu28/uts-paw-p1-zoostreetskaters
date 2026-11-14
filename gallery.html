@@ -90,17 +90,179 @@
     </header>
 
     <main id="main-content">
-      <section class="site-section" aria-labelledby="gallery-heading">
-        <div class="site-container">
-          <div class="site-starter-box">
-            <span class="site-eyebrow">Dokumentasi — Area Kerja Rivan</span>
-            <h1 id="gallery-heading">COMMUNITY GALLERY.</h1>
-            <p class="site-lead mb-0">
-              Struktur dasar halaman galeri (<code>gallery.html</code>) telah disiapkan. Rivan dapat
-              mengisi dokumentasi foto dari folder <code>img/gallery/</code> dan menambahkan styling
-              <code>.gallery-grid</code> menggunakan <code>repeat(auto-fit, minmax(...))</code> di
-              bagian 9 pada <code>css/style.css</code>.
-            </p>
+      <!-- Section 1: Gallery Hero -->
+      <section class="gallery-hero" aria-labelledby="gallery-heading">
+        <!-- Ganti path src di bawah ini untuk mengganti gambar latar Gallery Hero -->
+        <img
+          class="gallery-hero-bg"
+          src="img/gallery/gallery-hero.png"
+          alt="Latar Belakang Galeri Zoo Street Skaters Surabaya"
+        />
+        <div class="gallery-hero-overlay"></div>
+        <div class="gallery-container gallery-hero-content">
+          <h1 class="gallery-hero-title" id="gallery-heading">GALLERY</h1>
+        </div>
+      </section>
+
+      <!-- Section 2: Gallery Grid -->
+      <section class="gallery-section" aria-label="Galeri Foto Komunitas">
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_1.png"
+                  alt="Dokumentasi latihan di Skatepark Ketabang Surabaya"
+                  width="593"
+                  height="889"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_2.png"
+                  alt="Ramp dan obstacle Skatepark Ketabang Surabaya"
+                  width="593"
+                  height="529"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/titiknol_kotalama.jpg"
+                  alt="Kumpul bersama komunitas di Titik Nol Kota Lama Surabaya"
+                  width="3307"
+                  height="2480"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/hotel_majapahit_1.jpg"
+                  alt="City roll malam hari di kawasan Hotel Majapahit"
+                  width="2160"
+                  height="2323"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_1.png"
+                  alt="Sesi sore dan latihan teknik di Skatepark Ketabang"
+                  width="593"
+                  height="889"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_2.png"
+                  alt="Aktivitas skater melintasi arena Skatepark Ketabang"
+                  width="593"
+                  height="529"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/titiknol_kotalama.jpg"
+                  alt="Eksplorasi spot skating di kawasan Kota Lama Surabaya"
+                  width="3307"
+                  height="2480"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/hotel_majapahit_1.jpg"
+                  alt="Suasana street skating malam hari di Surabaya"
+                  width="2160"
+                  height="2323"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_1.png"
+                  alt="Latihan trik dan rintangan di skatepark"
+                  width="593"
+                  height="889"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/skatepark_ketabang_2.png"
+                  alt="Kebersamaan anggota komunitas di area skatepark"
+                  width="593"
+                  height="529"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/titiknol_kotalama.jpg"
+                  alt="Sunday morning skate di Titik Nol Surabaya"
+                  width="3307"
+                  height="2480"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="gallery-card" tabindex="0">
+              <div class="gallery-card-media">
+                <img
+                  class="gallery-card-img"
+                  src="img/gallery/hotel_majapahit_1.jpg"
+                  alt="Dokumentasi city roll melintasi cagar budaya Surabaya"
+                  width="2160"
+                  height="2323"
+                  loading="lazy"
+                />
+              </div>
+            </article>
           </div>
         </div>
       </section>

@@ -1074,13 +1074,123 @@ a {
 /* ==========================================================================
    9. GALLERY — RIVAN
    Catatan Kontrak: Rivan menambahkan styling khusus gallery.html di sini.
-   Gunakan prefix class .gallery-* dengan CSS Grid:
-   .gallery-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-     gap: var(--space-4);
-   }
+   Gunakan prefix class .gallery-* dengan card layout dan CSS Grid.
    ========================================================================== */
+.gallery-container {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.gallery-hero {
+  position: relative;
+  min-height: 16rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-ink-black);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-12);
+  overflow: hidden;
+}
+
+.gallery-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 1;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(rgba(23, 23, 25, 0.45), rgba(23, 23, 25, 0.7));
+  pointer-events: none;
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.gallery-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-pure-white);
+  margin-bottom: 0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-section {
+  padding-block: var(--space-8) var(--space-16);
+  background:
+    radial-gradient(ellipse at top left, rgba(240, 68, 155, 0.18), transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(246, 202, 56, 0.14), transparent 45%),
+    linear-gradient(180deg, #1d1b24 0%, var(--color-ink-black) 100%);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+/* Gallery Photo Card Component */
+.gallery-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.gallery-card:hover,
+.gallery-card:focus-within {
+  transform: translateY(-8px);
+  border-color: var(--color-street-purple);
+  box-shadow: 0 16px 36px rgba(150, 59, 206, 0.4);
+}
+
+.gallery-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--color-concrete);
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-base), filter var(--transition-base);
+}
+
+.gallery-card:hover .gallery-card-img,
+.gallery-card:focus-within .gallery-card-img {
+  transform: scale(1.08);
+  filter: brightness(1.06);
+}
 
 /* ==========================================================================
    10. RESPONSIVE (MOBILE-FIRST BREAKPOINTS: 48rem & 64rem)
@@ -1144,6 +1254,19 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-10);
+  }
+
+  .gallery-hero {
+    min-height: 20rem;
+    padding-block: var(--space-16);
+  }
+
+  .gallery-container {
+    padding-inline: var(--space-5);
+  }
+
+  .gallery-grid {
+    gap: var(--space-4);
   }
 
   .site-footer-grid {
@@ -1224,6 +1347,19 @@ a {
     gap: var(--space-6);
   }
 
+  .gallery-hero {
+    min-height: 24rem;
+    padding-block: var(--space-20);
+  }
+
+  .gallery-container {
+    padding-inline: var(--space-6);
+  }
+
+  .gallery-grid {
+    gap: var(--space-4);
+  }
+
   .site-footer-grid {
     grid-template-columns: 2fr 1fr 1fr;
     gap: var(--space-12);
@@ -1268,7 +1404,9 @@ a {
   .site-btn-secondary:hover,
   .site-btn-yellow:hover,
   .site-card:hover .home-activity-img,
-  .activities-card:hover .activities-card-img {
+  .activities-card:hover .activities-card-img,
+  .gallery-card:hover,
+  .gallery-card:hover .gallery-card-img {
     transform: none;
   }
 }
