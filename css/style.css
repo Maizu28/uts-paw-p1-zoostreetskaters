@@ -1281,6 +1281,37 @@ a {
   font-size: 2rem;
   margin-bottom: var(--space-2);
 }
+
+/* Responsive Layout for About Page (Section 8 — Gansa) */
+@media (min-width: 48rem) {
+  .about-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-disciplines-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-cta-banner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-12);
+  }
+
+  .about-title {
+    font-size: 3.25rem;
+  }
+}
 /* ==========================================================================
    8. ABOUT — GANSA
    Catatan Kontrak: Gansa menambahkan styling khusus about.html di sini.

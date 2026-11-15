@@ -90,16 +90,202 @@
     </header>
 
     <main id="main-content">
-      <section class="site-section" aria-labelledby="about-heading">
+      <!-- Section 1: Hero Banner & Quick Stats -->
+      <section class="about-hero" aria-labelledby="about-hero-title">
         <div class="site-container">
-          <div class="site-starter-box">
-            <span class="site-eyebrow">Tentang Komunitas — Area Kerja Gansa</span>
-            <h1 id="about-heading">ABOUT ZOO STREET SKATERS.</h1>
-            <p class="site-lead mb-0">
-              Struktur dasar halaman profil komunitas (<code>about.html</code>) telah disiapkan.
-              Gansa dapat menambahkan konten profil komunitas dan kelas <code>.about-*</code> di
-              bagian 8 pada <code>css/style.css</code> sesuai informasi resmi pengelola.
-            </p>
+          <div class="about-hero-grid">
+            <div class="about-hero-content">
+              <span class="site-eyebrow">Profil Komunitas</span>
+              <h1 class="about-title" id="about-hero-title">
+                BORN IN SURABAYA. <span class="about-title-highlight">BUILT ON ASPHALT.</span>
+              </h1>
+              <p class="site-lead">
+                Zoo Street Skaters adalah wadah komunitas inline skating urban di Surabaya yang memadukan kultur jalanan, olahraga, dan solidaritas lintas generasi.
+              </p>
+              <p class="text-muted">
+                Dari aspal kota tua hingga trotoar perkotaan, kami hadir sebagai ruang terbuka untuk siapa saja yang ingin meluncur, belajar teknik, dan bertumbuh bersama.
+              </p>
+              <div class="about-hero-actions">
+                <a class="btn site-btn site-btn-primary" href="register.html">
+                  GABUNG SEKARANG <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <a class="btn site-btn site-btn-secondary" href="activities.html">
+                  LIHAT AKTIVITAS
+                </a>
+              </div>
+            </div>
+
+            <div class="about-stats-grid">
+              <div class="about-stat-card">
+                <span class="about-stat-number">2021</span>
+                <span class="about-stat-label">Tahun Berdiri</span>
+              </div>
+              <div class="about-stat-card">
+                <span class="about-stat-number">150+</span>
+                <span class="about-stat-label">Active Skaters</span>
+              </div>
+              <div class="about-stat-card">
+                <span class="about-stat-number">4</span>
+                <span class="about-stat-label">Disiplin Skate</span>
+              </div>
+              <div class="about-stat-card">
+                <span class="about-stat-number">12+</span>
+                <span class="about-stat-label">Spot Surabaya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Story & Mission -->
+      <section class="site-section" aria-labelledby="story-heading">
+        <div class="site-container">
+          <div class="about-story-grid">
+            <article class="about-panel about-panel-accent">
+              <span class="site-eyebrow">Sejarah &amp; Perjalanan</span>
+              <h2 class="about-section-title" id="story-heading">DARI SUDUT TAMAN HINGGA JALANAN KOTA.</h2>
+              <p>
+                Bermula dari sekelompok pegiat sepatu roda yang sering berkumpul di area sekitar Kebun Binatang Surabaya (KBS) dan Skate &amp; BMX Park Ketabang, Zoo Street Skaters berkembang menjadi komunitas independen yang terbuka bagi seluruh lapisan masyarakat.
+              </p>
+              <p>
+                Nama <strong>"Zoo"</strong> terinspirasi dari titik temu pertama kami di selatan kota Surabaya. Kami ingin mengubah stigma bahwa inline skating hanya bisa dinikmati di lintasan balap tertutup. Bagi kami, jalanan dan ruang publik perkotaan adalah ruang kreasi, kebersamaan, dan kebebasan berekspresi.
+              </p>
+            </article>
+
+            <article class="about-panel">
+              <span class="site-eyebrow">Visi &amp; Komitmen</span>
+              <h2 class="about-section-title">ROLL TOGETHER. GROW TOGETHER.</h2>
+              <p>
+                Visi kami adalah menciptakan ekosistem bermain sepatu roda yang ramah, aman, dan saling mendukung bagi skater dari level pemula mutlak hingga advanced di Kota Surabaya.
+              </p>
+              <ul class="about-list">
+                <li class="about-list-item">
+                  <i class="bi bi-check2-circle about-list-icon" aria-hidden="true"></i>
+                  <span><strong>Inklusif Tanpa Syarat:</strong> Siapa pun dapat bergabung tanpa memandang latar belakang, usia, gender, maupun perlengkapan sepatu roda yang dimiliki.</span>
+                </li>
+                <li class="about-list-item">
+                  <i class="bi bi-shield-check about-list-icon" aria-hidden="true"></i>
+                  <span><strong>Keselamatan Jalanan:</strong> Mengutamakan standar keselamatan (helm, wrist guard, knee pad) dan menjunjung etika berbagi ruang dengan pengguna jalan lainnya.</span>
+                </li>
+                <li class="about-list-item">
+                  <i class="bi bi-people about-list-icon" aria-hidden="true"></i>
+                  <span><strong>Coaching &amp; Mentoring:</strong> Sesi latihan teknik dasar gratis yang dibimbing langsung oleh anggota berpengalaman setiap akhir pekan.</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Community Values -->
+      <section class="site-section site-section-alt" aria-labelledby="values-heading">
+        <div class="site-container">
+          <div class="site-section-header about-section-header">
+            <span class="site-eyebrow">Pilar Komunitas</span>
+            <h2 id="values-heading">NILAI YANG KAMI JUNJUNG TINGGI.</h2>
+            <p class="site-lead">Tiga nilai utama yang menjadi identitas dan pedoman etika setiap anggota Zoo Street Skaters.</p>
+          </div>
+
+          <div class="about-values-grid">
+            <div class="about-value-card">
+              <div class="about-value-icon">
+                <i class="bi bi-heart-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="about-value-title">Solidaritas &amp; Kebersamaan</h3>
+              <p class="text-muted mb-0">
+                Tidak ada senioritas. Kami meluncur dengan prinsip saling menjaga satu sama lain di jalanan, saling menyemangati, dan tidak meninggalkan rekan skater di belakang.
+              </p>
+            </div>
+
+            <div class="about-value-card">
+              <div class="about-value-icon">
+                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="about-value-title">Progression &amp; Courage</h3>
+              <p class="text-muted mb-0">
+                Jatuh dan bangkit adalah bagian alami dari dunia inline skate. Kami mendorong setiap skater untuk berani melangkah keluar dari zona nyaman dan mengembangkan kemampuan baru.
+              </p>
+            </div>
+
+            <div class="about-value-card">
+              <div class="about-value-icon">
+                <i class="bi bi-compass-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="about-value-title">Street Etiquette &amp; Respect</h3>
+              <p class="text-muted mb-0">
+                Menghormati pejalan kaki, mematuhi rambu lalu lintas, dan menjaga kebersihan spot bermain. Komunitas yang kuat adalah komunitas yang bertanggung jawab atas lingkungannya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Skate Disciplines -->
+      <section class="site-section" aria-labelledby="disciplines-heading">
+        <div class="site-container">
+          <div class="site-section-header about-section-header">
+            <span class="site-eyebrow">Disiplin &amp; Peminatan</span>
+            <h2 id="disciplines-heading">TEMUKAN GAYA SKATE KAMU.</h2>
+            <p class="site-lead">Eksplorasi cabang inline skate yang aktif ditekuni bersama anggota komunitas di Surabaya.</p>
+          </div>
+
+          <div class="about-disciplines-grid">
+            <div class="about-discipline-card">
+              <div>
+                <span class="about-discipline-tag">City Roll</span>
+                <h3 class="h4">Urban Street Skating</h3>
+                <p class="text-muted">
+                  Menjelajahi jalanan utama, rute pedestrian Tunjungan, dan kawasan heritage Kota Lama Surabaya pada malam hari secara terorganisir.
+                </p>
+              </div>
+              <a class="site-inline-link mt-3" href="activities.html#urban">
+                Pelajari Rute <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="about-discipline-card">
+              <div>
+                <span class="about-discipline-tag">Freestyle</span>
+                <h3 class="h4">Slalom &amp; Cone Drills</h3>
+                <p class="text-muted">
+                  Melatih kelincahan manuver, keseimbangan, serta form footwork presisi di antara deretan cone dengan bimbingan teknik yang sistematis.
+                </p>
+              </div>
+              <a class="site-inline-link mt-3" href="activities.html#freestyle">
+                Pelajari Teknik <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="about-discipline-card">
+              <div>
+                <span class="about-discipline-tag">Park &amp; Ramp</span>
+                <h3 class="h4">Skatepark &amp; Aggressive</h3>
+                <p class="text-muted">
+                  Sesi pumping di bowl, drop-in quarter pipe, dan eksplorasi ramp di Skate &amp; BMX Park Ketabang bersama skater berpengalaman.
+                </p>
+              </div>
+              <a class="site-inline-link mt-3" href="activities.html#skatepark">
+                Lihat Spot <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Call to Action Banner -->
+      <section class="site-section pt-0" aria-labelledby="cta-heading">
+        <div class="site-container">
+          <div class="about-cta-banner">
+            <div>
+              <span class="site-eyebrow">Bergabung Bersama Kami</span>
+              <h2 class="about-cta-title" id="cta-heading">SIAP MELUNCUR BERSAMA KAMI?</h2>
+              <p class="mb-0 text-muted">
+                Bergabunglah dengan grup koordinasi dan ikuti sesi latihan mingguan kami. Terbuka untuk umum, ramah pemula, dan gratis!
+              </p>
+            </div>
+            <a class="btn site-btn site-btn-primary" href="register.html">
+              DAFTAR SEKARANG <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </section>
