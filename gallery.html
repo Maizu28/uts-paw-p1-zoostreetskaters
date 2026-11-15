@@ -1,336 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gallery — Zoo Street Skaters Surabaya</title>
-    <meta
-      name="description"
-      content="Dokumentasi foto aktivitas dan kegiatan komunitas Zoo Street Skaters Surabaya."
-    />
-    <link rel="icon" type="image/svg+xml" href="img/logo/Logo_zoo_lama.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <a class="site-skip-link" href="#main-content">Lewati ke konten utama</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Zoo Street Skaters</title>
+  <meta name="description" content="Zoo Street Skaters: komunitas inline skating di Surabaya. Roll together. Grow together.">
+  <link rel="icon" type="image/png" href="img/logo/Logo_zoo_lama.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-dark site-navbar" aria-label="Navigasi utama">
-        <div class="site-container site-navbar-inner">
-          <a class="site-brand" href="index.html">
-            <img
-              class="site-brand-logo"
-              src="img/logo/Logo_zoo_lama.png"
-              alt="Logo Zoo Street Skaters"
-              width="40"
-              height="40"
-            />
-            <span class="site-brand-text">
-              <span class="site-brand-name">Zoo Street Skaters</span>
-              <span class="site-brand-sub">Surabaya</span>
-            </span>
-          </a>
-
-          <button
-            class="navbar-toggler site-navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Buka menu navigasi"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav site-nav-list">
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="activities.html">Activities</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="register.html">Register</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link active" href="gallery.html" aria-current="page">
-                  Gallery
-                </a>
-              </li>
-              <li class="nav-item site-nav-cta-wrap">
-                <a class="btn site-btn site-btn-primary site-nav-cta" href="register.html">
-                  Join Community
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main-content">
-      <!-- Section 1: Gallery Hero -->
-      <section class="gallery-hero" aria-labelledby="gallery-heading">
-        <!-- Ganti path src di bawah ini untuk mengganti gambar latar Gallery Hero -->
-        <img
-          class="gallery-hero-bg"
-          src="img/gallery/gallery-hero.png"
-          alt="Latar Belakang Galeri Zoo Street Skaters Surabaya"
-        />
-        <div class="gallery-hero-overlay"></div>
-        <div class="gallery-container gallery-hero-content">
-          <h1 class="gallery-hero-title" id="gallery-heading">GALLERY</h1>
-        </div>
-      </section>
-
-      <!-- Section 2: Gallery Grid -->
-      <section class="gallery-section" aria-label="Galeri Foto Komunitas">
-        <div class="gallery-container">
-          <div class="gallery-grid">
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_1.png"
-                  alt="Dokumentasi latihan di Skatepark Ketabang Surabaya"
-                  width="593"
-                  height="889"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_2.png"
-                  alt="Ramp dan obstacle Skatepark Ketabang Surabaya"
-                  width="593"
-                  height="529"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/titiknol_kotalama.jpg"
-                  alt="Kumpul bersama komunitas di Titik Nol Kota Lama Surabaya"
-                  width="3307"
-                  height="2480"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/hotel_majapahit_1.jpg"
-                  alt="City roll malam hari di kawasan Hotel Majapahit"
-                  width="2160"
-                  height="2323"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_1.png"
-                  alt="Sesi sore dan latihan teknik di Skatepark Ketabang"
-                  width="593"
-                  height="889"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_2.png"
-                  alt="Aktivitas skater melintasi arena Skatepark Ketabang"
-                  width="593"
-                  height="529"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/titiknol_kotalama.jpg"
-                  alt="Eksplorasi spot skating di kawasan Kota Lama Surabaya"
-                  width="3307"
-                  height="2480"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/hotel_majapahit_1.jpg"
-                  alt="Suasana street skating malam hari di Surabaya"
-                  width="2160"
-                  height="2323"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_1.png"
-                  alt="Latihan trik dan rintangan di skatepark"
-                  width="593"
-                  height="889"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/skatepark_ketabang_2.png"
-                  alt="Kebersamaan anggota komunitas di area skatepark"
-                  width="593"
-                  height="529"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/titiknol_kotalama.jpg"
-                  alt="Sunday morning skate di Titik Nol Surabaya"
-                  width="3307"
-                  height="2480"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-
-            <article class="gallery-card" tabindex="0">
-              <div class="gallery-card-media">
-                <img
-                  class="gallery-card-img"
-                  src="img/gallery/hotel_majapahit_1.jpg"
-                  alt="Dokumentasi city roll melintasi cagar budaya Surabaya"
-                  width="2160"
-                  height="2323"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-container">
-        <div class="site-footer-grid">
-          <div class="site-footer-brand">
-            <a class="site-brand" href="index.html">
-              <img
-                class="site-brand-logo"
-                src="img/logo/Logo_zoo_lama.png"
-                alt="Logo Zoo Street Skaters"
-                width="40"
-                height="40"
-              />
-              <span class="site-brand-text">
-                <span class="site-brand-name">Zoo Street Skaters</span>
-                <span class="site-brand-sub">Surabaya, Indonesia</span>
-              </span>
-            </a>
-            <p class="site-footer-tagline">ROLL TOGETHER. GROW TOGETHER.</p>
-            <p class="mb-0">
-              Komunitas inline skating urban di Surabaya yang terbuka untuk pemula hingga skater
-              berpengalaman.
-            </p>
-          </div>
-
-          <div class="site-footer-nav">
-            <h2 class="site-footer-heading">Navigasi</h2>
-            <ul class="site-footer-list">
-              <li><a class="site-footer-link" href="index.html">Home</a></li>
-              <li><a class="site-footer-link" href="activities.html">Activities</a></li>
-              <li><a class="site-footer-link" href="register.html">Register</a></li>
-              <li><a class="site-footer-link" href="about.html">About</a></li>
-              <li><a class="site-footer-link" href="gallery.html">Gallery</a></li>
-            </ul>
-          </div>
-
-          <div class="site-footer-connect">
-            <h2 class="site-footer-heading">Komunitas</h2>
-            <p class="site-footer-meta">
-              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-              <span>Surabaya, Jawa Timur, Indonesia</span>
-            </p>
-            <p class="site-footer-meta">
-              <i class="bi bi-instagram" aria-hidden="true"></i>
-              <span>Instagram: Menunggu tautan resmi pengelola</span>
-            </p>
-            <p class="site-footer-meta">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i>
-              <span>WhatsApp: Menunggu tautan resmi pengelola</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="site-footer-bottom">
-          <p class="mb-0">&copy; 2026 Zoo Street Skaters Surabaya. All rights reserved.</p>
-          <p class="mb-0">Urban Skate Community Website — Surabaya, Indonesia</p>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top zss-nav" aria-label="Navigasi utama">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ZOO STREET SKATERS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="activities.html">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html" aria-current="page">Gallery</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-zss" href="register.html">Join Community</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <main id="main">
+    <!-- Section 1: Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="display-font">MOMENTS ON WHEELS.</h1>
+        <p class="lead">Dokumentasi kegiatan Zoo Street Skaters.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Gallery Grid -->
+    <section class="section">
+      <div class="container">
+        <h2 class="display-font mb-4">PHOTO HIGHLIGHTS</h2>
+        <div class="gallery-grid">
+          <div class="ph" role="img" aria-label="Foto kegiatan Community Gathering">
+            <img src="img/gallery/76_Heppi.jpg" alt="Community Gathering Zoo Street Skaters Surabaya" width="1194" height="1272" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto latihan Freestyle Slalom">
+            <img src="img/gallery/slalom_1.png" alt="Latihan Freestyle Slalom melewati cone" width="355" height="454" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Urban Skating di Hotel Majapahit">
+            <img src="img/gallery/hotel_majapahit_1.jpg" alt="Urban Skating melintasi Hotel Majapahit Jl. Tunjungan Surabaya" width="2160" height="2323" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Skate Park di Ketabang">
+            <img src="img/gallery/skatepark_ketabang_1.png" alt="Sesi Skate Park di Skatepark Ketabang Surabaya" width="593" height="889" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Event Halloween Night Skate">
+            <img src="img/gallery/helloween2024-1.jpg" alt="Event Halloween Night Street Skate Surabaya" width="1440" height="1440" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto kumpul di Titik Nol Kota Lama">
+            <img src="img/gallery/titiknol_kotalama.jpg" alt="Komunitas Zoo Street Skaters di Titik Nol Kota Lama Surabaya" width="3307" height="2480" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Event Halloween Night Roll">
+            <img src="img/gallery/helloween2024-2.jpg" alt="Halloween Night Skate berkeliling kota Surabaya" width="1440" height="1440" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto rintangan skatepark">
+            <img src="img/gallery/skatepark_ketabang_2.png" alt="Ramp dan rintangan di Skatepark Ketabang Surabaya" width="593" height="529" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto kostum Halloween Skate">
+            <img src="img/gallery/helloween2024-3.jpg" alt="Anggota komunitas bersepatu roda dengan kostum Halloween" width="1440" height="1440" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Event 17 Agustus">
+            <img src="img/gallery/17agustus2026.png" alt="Sesi Rolling Kemerdekaan 17 Agustus Surabaya" width="459" height="262" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Sesi The Linnea">
+            <img src="img/gallery/the_linnea.png" alt="Sesi skating komunitas di The Linnea Surabaya" width="547" height="562" loading="lazy">
+          </div>
+          <div class="ph" role="img" aria-label="Foto Emblem Komunitas">
+            <img src="img/gallery/Logo_zoo_lama.png" alt="Logo resmi komunitas Zoo Street Skaters Surabaya" width="1600" height="1600" loading="lazy">
+          </div>
+        </div>
+        <p class="small text-secondary mt-3">Dokumentasi foto asli kegiatan komunitas Zoo Street Skaters di Surabaya.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: Events -->
+    <section class="section alt">
+      <div class="container">
+        <h2 class="display-font mb-4">COMMUNITY EVENTS</h2>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Dokumentasi Event 17 Agustus">
+                <img src="img/events/17agustus2026.png" alt="Dokumentasi Event 17 Agustus Zoo Street Skaters" width="459" height="262" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">17 Agustus Skate</h3>
+                <p class="mb-0 text-secondary">Sesi rolling spesial memperingati hari kemerdekaan bersama komunitas di jalanan Surabaya.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Dokumentasi Event The Linnea">
+                <img src="img/events/the_linnea.png" alt="Sesi gathering komunitas di The Linnea Surabaya" width="547" height="562" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">The Linnea Session</h3>
+                <p class="mb-0 text-secondary">Keseruan gathering dan sesi latihan inline skate di area The Linnea Surabaya.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Dokumentasi Event Halloween Night Skate 2024">
+                <img src="img/events/helloween2024-1.jpg" alt="Halloween Night Street Skate Surabaya 2024" width="1440" height="1440" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">Halloween Night Skate</h3>
+                <p class="mb-0 text-secondary">Rolling malam menyusuri ikon kota Surabaya dengan aneka kostum unik bertema Halloween.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Dokumentasi Event 76 Heppi">
+                <img src="img/events/76_Heppi.jpg" alt="Kebersamaan komunitas di event 76 Heppi" width="1194" height="1272" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">76 Heppi Gathering</h3>
+                <p class="mb-0 text-secondary">Momen kebersamaan dan kekompakan komunitas Zoo Street Skaters dalam event 76 Heppi.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Instagram CTA -->
+    <section class="section cta-band">
+      <div class="container">
+        <h2 class="display-font">LIHAT LEBIH BANYAK DI INSTAGRAM</h2>
+        <a class="btn btn-zss btn-lg" href="https://www.instagram.com/zoostreetskaters">Buka Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="zss-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <p class="display-font fs-2 mb-2">ROLL TOGETHER.<br>GROW TOGETHER.</p>
+          <p class="text-secondary">Komunitas inline skating di Surabaya, Indonesia.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="fs-6">Menu</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="fs-6">Hubungi kami</h2>
+          <ul class="list-unstyled">
+            <li><a href="https://www.instagram.com/zoostreetskaters">Instagram</a></li>
+            <li><a href="https://wa.me/085850131912">WhatsApp</a></li>
+            <li>Surabaya, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small text-secondary mt-4 mb-0">&copy; 2026 Zoo Street Skaters. Hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

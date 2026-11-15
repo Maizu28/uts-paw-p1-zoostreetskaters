@@ -1,6 +1,6 @@
 # Zoo Street Skaters — Surabaya Urban Skate Community Website
 
-Website komunitas inline skating **Zoo Street Skaters** (Surabaya, Indonesia) untuk UTS Pemrograman Antarmuka Web.
+Website resmi komunitas inline skating **Zoo Street Skaters Surabaya** untuk UTS Pemrograman Antarmuka Web.
 Dibangun dengan pendekatan **Urban Editorial + Street Culture** menggunakan **HTML5 Semantic**, **CSS3**, dan **Bootstrap 5.3** (tanpa JavaScript buatan sendiri).
 
 **Tagline:** *ROLL TOGETHER. GROW TOGETHER.*
@@ -11,9 +11,9 @@ Dibangun dengan pendekatan **Urban Editorial + Street Culture** menggunakan **HT
 
 | Anggota | Peran | Tanggung Jawab |
 | --- | --- | --- |
-| **Farhan** | Project Lead | Project initialization, Global Design System (`css/style.css`), `index.html`, `activities.html`, serta integrasi & konsistensi seluruh halaman |
-| **Gansa** | Frontend Developer | Pengembangan konten & styling halaman `register.html`, `about.html`, dan `terima-kasih.html` |
-| **Rivan** | Frontend Developer | Pengembangan konten & styling halaman `gallery.html` menggunakan CSS Grid `repeat(auto-fit, minmax(...))` |
+| **Farhan** | Project Lead | Project initialization, Global Design System (`css/style.css`), `index.html`, `activities.html`, integrasi & konsistensi seluruh website |
+| **Gansa** | Frontend Developer | Pengembangan halaman `register.html`, `about.html`, dan `terima-kasih.html` |
+| **Rivan** | Frontend Developer | Pengembangan halaman `gallery.html` menggunakan CSS Grid `repeat(auto-fill, minmax(14rem, 1fr))` |
 
 ---
 
@@ -22,71 +22,59 @@ Dibangun dengan pendekatan **Urban Editorial + Street Culture** menggunakan **HT
 ```text
 zoo-street-skaters/
 ├── index.html          # Homepage (Farhan)
-├── activities.html     # Activities & Weekly Schedule (Farhan)
-├── register.html       # Starter semantic HTML untuk Gansa
-├── about.html          # Starter semantic HTML untuk Gansa
-├── gallery.html        # Starter semantic HTML untuk Rivan
-├── terima-kasih.html   # Starter semantic HTML untuk Gansa
+├── activities.html     # Activities & Weekly Sessions (Farhan)
+├── register.html       # Halaman pendaftaran anggota (Area kerja Gansa)
+├── about.html          # Halaman profil & FAQ komunitas (Gansa / Farhan)
+├── gallery.html        # Halaman dokumentasi galeri (Rivan)
+├── terima-kasih.html   # Halaman konfirmasi formulir (Gansa)
 ├── css/
-│   └── style.css       # Single global stylesheet (12-section contract)
+│   └── style.css       # Single global stylesheet (Tokens, ZSS Components, Responsive)
 ├── img/
 │   ├── logo/           # Logo Zoo Street Skaters
-│   ├── hero/           # Foto hero & about preview (+ varian 640w)
-│   ├── activities/     # Foto 4 aktivitas utama (+ varian 640w)
-│   ├── gallery/        # Aset dokumentasi galeri untuk Rivan
+│   ├── hero/           # Foto hero & dokumentasi
+│   ├── activities/     # Foto aktivitas skate
+│   ├── gallery/        # Aset dokumentasi foto komunitas
 │   └── events/         # Aset foto kegiatan/event
-└── README.md
+└── README.md           # Dokumentasi proyek & instruksi tim
 ```
 
 ---
 
 ## 3. Global Design Tokens (`css/style.css`)
 
-| Kategori | Token CSS | Nilai |
-| --- | --- | --- |
-| Primary | `--color-ink-black` | `#171719` |
-| Primary | `--color-street-purple` | `#963bce` |
-| Primary | `--color-pure-white` | `#ffffff` |
-| Accent | `--color-neon-pink` | `#f0449b` |
-| Accent | `--color-skate-yellow` | `#f6ca38` |
-| Accent | `--color-concrete` | `#303035` |
-| Neutral | `--color-surface` | `#252529` |
-| Neutral | `--color-muted-text` | `#b8b8be` |
-| Neutral | `--color-border` | `#414148` |
-| Typography | `--font-heading` / `--font-body` | `Space Grotesk` / `Inter` |
-| Layout | `--container-max` | `75rem` (`1200px`) |
-| Spacing | `--space-1` .. `--space-30` | Kelipatan `4px` (`0.25rem` .. `7.5rem`) |
-| Radii | `--radius-sm` / `--radius-md` / `--radius-lg` | `4px` / `8px` / `12px` |
+| Kategori | Token CSS | Nilai | Fungsi |
+| --- | --- | --- | --- |
+| Primary | `--ink` | `#171719` | Background utama website (Dark identity) |
+| Primary | `--purple` | `#963bce` | Warna aksen brand utama & background CTA band |
+| Primary | `--white` | `#ffffff` | Teks heading & konten kontras tinggi |
+| Accent | `--pink` | `#f0449b` | Aksen hover tombol, link hover, & bullet values |
+| Accent | `--yellow` | `#f6ca38` | Link default, focus-visible outline, & active indicator |
+| Accent | `--concrete` | `#303035` | Background kartu `.zss-card` & section `.alt` |
+| Neutral | `--border-color` | `#4a4a52` | Border form controls & kartu |
+| Typography | `--font-display` | `Bebas Neue` | Heading display utama (`.display-font`) |
+| Typography | `--font-heading` | `Space Grotesk` | Sub-heading, navbar brand, & accordion |
+| Typography | `--font-body` | `Inter` | Body text standar (line-height `1.65`) |
 
 ---
 
-## 4. Kontrak Kolaborasi CSS (`css/style.css`)
+## 4. Komponen Utama Design System
 
-Semua halaman **wajib** memuat `css/style.css` setelah Bootstrap 5.3 CSS dan mengikuti urutan bagian:
-
-1. Design Tokens
-2. Reset & Base
-3. Global Components (`.site-*`)
-4. Navbar & Footer (`.site-header`, `.site-navbar`, `.site-footer`)
-5. Home — Farhan (`.home-*`)
-6. Activities — Farhan (`.activities-*`)
-7. Register — Gansa (`.register-*`)
-8. About — Gansa (`.about-*`)
-9. Gallery — Rivan (`.gallery-*`)
-10. Responsive (`@media (min-width: 48rem)` & `@media (min-width: 64rem)`)
-11. Dark Mode (`@media (prefers-color-scheme: dark)`)
-12. Reduced Motion (`@media (prefers-reduced-motion: reduce)`)
-
-### Aturan Wajib untuk Semua Anggota
-- **Jangan** membuat file CSS atau HTML tambahan tanpa koordinasi.
-- **Jangan** menambahkan JavaScript buatan sendiri (hanya gunakan `bootstrap.bundle.min.js`).
-- **Jangan** menggunakan selector ID (`#id`), `!important`, atau inline `style=""`.
-- Gunakan token `var(--...)` untuk seluruh warna, font, spacing, dan radius.
-- Pertahankan header (`<header>`), skip link, dan footer (`<footer>`) agar tetap konsisten di semua halaman.
-- Pastikan setiap halaman memiliki tepat satu `<main>`, tepat satu `<h1>`, dan `aria-current="page"` pada link navbar yang aktif.
+- **Navbar Sticky:** `.zss-nav` dengan `.navbar-brand`, `.nav-link` (indikator aktif `.active` dengan warna kuning dan underline ungu), serta tombol CTA `.btn-zss`.
+- **Display Heading:** `.display-font` menggunakan tipografi bold street culture `Bebas Neue` dengan skala `clamp()`.
+- **Page Hero:** `.page-hero` dengan gradient latar belakang diagonal ungu-gelap.
+- **Alternating Sections:** `.section` bergantian dengan `.section.alt` (background `--concrete`).
+- **Card System:** `.zss-card` dengan auto-contrast (otomatis berlatar `--ink` saat berada di dalam `.section.alt`).
+- **Media Placeholders & Photos:** `.ph` dengan diagonal stripes dan `aspect-ratio: 4/3` atau `.tall` (`4/5`).
+- **Jadwal Sesi:** `.zss-table` responsif di dalam `.table-responsive`.
+- **CTA Band:** `.cta-band` dengan background ungu kontras dan tombol interaktif.
+- **Form Controls:** `.form-control` & `.form-select` berpenampilan dark-surface dengan border fokus warna kuning.
 
 ---
 
 ## 5. Menjalankan Secara Lokal
 
-Buka folder proyek di VS Code dan jalankan menggunakan ekstensi **Live Server** dari `index.html`, atau gunakan static file server lokal.
+Buka folder proyek di VS Code dan jalankan menggunakan ekstensi **Live Server** dari `index.html`, atau jalankan static server:
+```bash
+python -m http.server 8000
+```
+Buka browser di `http://localhost:8000/`.

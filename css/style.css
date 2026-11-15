@@ -1,102 +1,60 @@
 /* ==========================================================================
-   ZOO STREET SKATERS — GLOBAL DESIGN SYSTEM & STYLESHEET
-   Project Lead: Farhan | Surabaya Urban Inline Skate Community
-   CSS Collaboration Contract: 12-Section Architecture (Mobile-First)
+   ZOO STREET SKATERS — OFFICIAL STYLESHEET
+   Urban Editorial + Street Culture Identity (Surabaya)
+   Design System & Bootstrap 5.3 Customization
    ========================================================================== */
 
-/* ==========================================================================
-   1. DESIGN TOKENS
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS (:root)
+   -------------------------------------------------------------------------- */
 :root {
-  /* Primary Brand Palette */
-  --color-ink-black: #171719;
-  --color-street-purple: #963bce;
-  --color-street-purple-hover: #7f2fb2;
-  --color-street-purple-tint: #c88bf2;
-  --color-pure-white: #ffffff;
-
-  /* Accent Palette */
-  --color-neon-pink: #f0449b;
-  --color-skate-yellow: #f6ca38;
-  --color-concrete: #303035;
-
-  /* Neutral Palette */
-  --color-surface: #252529;
-  --color-surface-elevated: #1e1e22;
-  --color-muted-text: #b8b8be;
-  --color-border: #414148;
+  /* Primary & Accent Palette */
+  --ink: #171719;
+  --purple: #963bce;
+  --purple-hover: #7f2fb2;
+  --white: #ffffff;
+  --pink: #f0449b;
+  --yellow: #f6ca38;
+  --concrete: #303035;
+  --surface-elevated: #1e1e22;
+  --muted: #b8b8be;
+  --border-color: #4a4a52;
 
   /* Typography */
-  --font-heading: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-display: "Bebas Neue", "Space Grotesk", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --line-height-base: 1.65;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-h3: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --text-h2: clamp(1.75rem, 1.35rem + 2vw, 2.75rem);
-  --text-h1: clamp(2.25rem, 1.55rem + 3.5vw, 4.25rem);
-
-  /* Spacing Scale (Kelipatan 4px / 0.25rem) */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.25rem;  /* 20px */
-  --space-6: 1.5rem;   /* 24px */
-  --space-8: 2rem;     /* 32px */
-  --space-10: 2.5rem;  /* 40px */
-  --space-12: 3rem;    /* 48px */
-  --space-16: 4rem;    /* 64px */
-  --space-24: 6rem;    /* 96px */
-  --space-30: 7.5rem;  /* 120px */
-
-  /* Layout & Radii */
-  --container-max: 75rem; /* 1200px */
-  --radius-sm: 0.25rem;   /* 4px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-
-  /* Effects & Motion */
-  --transition-fast: 180ms ease;
-  --transition-base: 260ms ease;
+  /* Radii & Shadows */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.35);
 
-  /* Bootstrap 5.3 Variable Overrides (Zero !important) */
-  --bs-body-bg: var(--color-ink-black);
-  --bs-body-color: var(--color-pure-white);
+  /* Bootstrap 5.3 Overrides */
+  --bs-body-bg: var(--ink);
+  --bs-body-color: var(--white);
   --bs-body-font-family: var(--font-body);
-  --bs-body-line-height: 1.6;
-  --bs-border-color: var(--color-border);
-  --bs-primary: var(--color-street-purple);
-  --bs-secondary-color: var(--color-muted-text);
-  --bs-link-color: var(--color-pure-white);
-  --bs-link-hover-color: var(--color-skate-yellow);
+  --bs-body-line-height: var(--line-height-base);
+  --bs-border-color: var(--border-color);
+  --bs-primary: var(--purple);
 }
 
-/* ==========================================================================
+/* --------------------------------------------------------------------------
    2. RESET & BASE
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
 body {
-  margin: 0;
-  background-color: var(--color-ink-black);
-  color: var(--color-pure-white);
+  background: var(--ink);
+  color: var(--white);
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: 1.6;
+  line-height: var(--line-height-base);
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
@@ -106,1554 +64,489 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
+.navbar-brand {
   font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: var(--color-pure-white);
 }
 
-h1 {
-  font-size: var(--text-h1);
-}
-
-h2 {
-  font-size: var(--text-h2);
-}
-
-h3 {
-  font-size: var(--text-h3);
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  color: var(--color-muted-text);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.display-font {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.95;
+  font-size: clamp(2.2rem, 6vw, 4rem);
 }
 
 a {
-  color: inherit;
+  color: var(--yellow);
   text-decoration: none;
-  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+  transition: color 0.2s ease;
 }
 
-/* Accessible Focus Indicator */
+a:hover {
+  color: var(--pink);
+}
+
 :focus-visible {
-  outline: 2px solid var(--color-skate-yellow);
+  outline: 3px solid var(--yellow);
   outline-offset: 3px;
 }
 
-/* Skip Link */
-.site-skip-link {
+.skip-link {
   position: absolute;
-  top: -100%;
-  left: var(--space-4);
-  z-index: 1100;
-  padding: var(--space-3) var(--space-5);
-  background-color: var(--color-skate-yellow);
-  color: var(--color-ink-black);
-  font-family: var(--font-heading);
+  left: -999px;
+  top: 0;
+  background: var(--yellow);
+  color: #000000;
+  padding: 0.5rem 1rem;
   font-weight: 700;
-  font-size: var(--text-sm);
   border-radius: var(--radius-sm);
+  z-index: 2000;
 }
 
-.site-skip-link:focus {
-  top: var(--space-4);
+.skip-link:focus {
+  left: 0;
 }
 
-/* ==========================================================================
-   3. GLOBAL COMPONENTS
-   ========================================================================== */
-.site-container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--space-5); /* Mobile: 20px */
+/* --------------------------------------------------------------------------
+   3. NAVIGATION (ZSS NAV)
+   -------------------------------------------------------------------------- */
+.zss-nav {
+  background: rgba(23, 23, 25, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--concrete);
 }
 
-.site-section {
-  padding-block: var(--space-16); /* Mobile: 64px */
-}
-
-.site-section-alt {
-  background-color: var(--color-surface-elevated);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.site-section-header {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
-}
-
-.site-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-skate-yellow);
-}
-
-.site-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 1.5rem;
-  height: 2px;
-  background-color: var(--color-neon-pink);
-}
-
-.site-lead {
-  font-size: var(--text-lg);
-  color: var(--color-muted-text);
-  max-width: 60ch;
-}
-
-/* Customized Bootstrap Buttons */
-.site-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  min-height: 2.75rem; /* >= 44px touch target */
-  min-width: 2.75rem;
-  padding: var(--space-3) var(--space-6);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  border: 1px solid transparent;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-}
-
-.site-btn-primary {
-  background-color: var(--color-street-purple);
-  border-color: var(--color-street-purple);
-  color: var(--color-pure-white);
-}
-
-.site-btn-primary:hover,
-.site-btn-primary:focus-visible {
-  background-color: var(--color-street-purple-hover);
-  border-color: var(--color-street-purple-tint);
-  color: var(--color-pure-white);
-  transform: translateY(-2px);
-}
-
-.site-btn-secondary {
-  background-color: transparent;
-  border-color: var(--color-border);
-  color: var(--color-pure-white);
-}
-
-.site-btn-secondary:hover,
-.site-btn-secondary:focus-visible {
-  background-color: var(--color-concrete);
-  border-color: var(--color-skate-yellow);
-  color: var(--color-skate-yellow);
-  transform: translateY(-2px);
-}
-
-.site-btn-yellow {
-  background-color: var(--color-skate-yellow);
-  border-color: var(--color-skate-yellow);
-  color: var(--color-ink-black);
-}
-
-.site-btn-yellow:hover,
-.site-btn-yellow:focus-visible {
-  background-color: var(--color-pure-white);
-  border-color: var(--color-pure-white);
-  color: var(--color-ink-black);
-  transform: translateY(-2px);
-}
-
-.site-btn-pending,
-.site-btn[aria-disabled="true"] {
-  background-color: var(--color-surface);
-  border-color: var(--color-border);
-  color: var(--color-muted-text);
-  cursor: not-allowed;
-  opacity: 0.85;
-}
-
-/* Customized Bootstrap Badges */
-.site-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: var(--space-1) var(--space-3);
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
+.navbar-brand {
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--white);
+}
+
+.navbar-brand:hover {
+  color: var(--yellow);
+}
+
+.nav-link {
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--yellow);
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: var(--yellow);
+  box-shadow: inset 0 -3px var(--purple);
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTONS
+   -------------------------------------------------------------------------- */
+.btn-zss {
+  background: var(--purple);
+  color: var(--white);
+  border: 0;
+  font-weight: 600;
   border-radius: var(--radius-sm);
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
-.site-badge-purple {
-  background-color: var(--color-street-purple);
-  color: var(--color-pure-white);
+.btn-zss:hover,
+.btn-zss:focus-visible {
+  background: var(--pink);
+  color: var(--white);
 }
 
-.site-badge-pink {
-  background-color: var(--color-neon-pink);
-  color: var(--color-ink-black);
+/* --------------------------------------------------------------------------
+   5. PAGE HERO & SECTIONS
+   -------------------------------------------------------------------------- */
+.page-hero {
+  padding: clamp(4rem, 10vw, 8rem) 0 4rem;
+  background: linear-gradient(120deg, var(--ink) 55%, rgba(150, 59, 206, 0.35));
 }
 
-.site-badge-yellow {
-  background-color: var(--color-skate-yellow);
-  color: var(--color-ink-black);
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 12vw, 8.5rem);
+  line-height: 0.92;
+  margin-bottom: 1.25rem;
 }
 
-.site-badge-concrete {
-  background-color: var(--color-concrete);
-  border: 1px solid var(--color-border);
-  color: var(--color-pure-white);
+.page-hero .lead {
+  max-width: 36rem;
+  color: var(--muted);
 }
 
-/* Customized Bootstrap Cards */
-.site-card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  color: var(--color-pure-white);
+.section {
+  padding: clamp(4rem, 9vw, 7.5rem) 0;
+}
+
+.alt {
+  background: var(--concrete);
+}
+
+/* --------------------------------------------------------------------------
+   6. CARDS & PHOTO PLACEHOLDERS (PH)
+   -------------------------------------------------------------------------- */
+.zss-card {
+  background: var(--concrete);
+  border: 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  transition: transform 0.2s ease;
 }
 
-.site-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-street-purple);
-  box-shadow: var(--shadow-card);
+.zss-card:hover {
+  transform: translateY(-3px);
 }
 
-.site-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  gap: var(--space-3);
-  padding: var(--space-6);
-}
-
-.site-inline-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 2.75rem;
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-skate-yellow);
-}
-
-.site-inline-link:hover,
-.site-inline-link:focus-visible {
-  color: var(--color-pure-white);
-}
-
-/* Starter Placeholder Notice (for Gansa & Rivan pages) */
-.site-starter-box {
-  padding: var(--space-8);
-  background-color: var(--color-surface);
-  border: 1px dashed var(--color-border);
+.zss-info-card {
+  padding: 1.75rem;
+  background: var(--concrete);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
 }
 
-/* ==========================================================================
-   4. NAVBAR & FOOTER
-   ========================================================================== */
+.alt .zss-card {
+  background: var(--ink);
+}
+
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background: repeating-linear-gradient(135deg, #26262b 0 14px, #2d2d33 14px 28px);
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.ph.tall {
+  aspect-ratio: 4 / 5;
+}
+
+.card .ph {
+  border-radius: 0;
+  padding: 0;
+}
+
+.ph:has(img) {
+  padding: 0;
+  background: none;
+}
+
+.ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   7. TABLE
+   -------------------------------------------------------------------------- */
+.zss-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--white);
+  min-width: 36rem;
+}
+
+.zss-table caption {
+  color: #bbbbbb;
+}
+
+.zss-table th,
+.zss-table td {
+  padding: 1rem 0.75rem;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   8. CTA BAND
+   -------------------------------------------------------------------------- */
+.cta-band {
+  background: var(--purple);
+  text-align: center;
+}
+
+.cta-band .btn-zss {
+  background: var(--ink);
+}
+
+.cta-band .btn-zss:hover,
+.cta-band .btn-zss:focus-visible {
+  background: var(--yellow);
+  color: #000000;
+}
+
+.cta-band h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. ABOUT VALUES & ACCORDION
+   -------------------------------------------------------------------------- */
+.values {
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+.values li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--concrete);
+}
+
+.values li::before {
+  content: "";
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--pink);
+  margin-right: 0.8rem;
+  border-radius: 50%;
+}
+
+.accordion-button {
+  background: var(--concrete);
+  color: var(--white);
+  font-family: var(--font-heading);
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--ink);
+  color: var(--yellow);
+}
+
+.accordion-body {
+  background: var(--ink);
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   10. GALLERY GRID (MASONRY — NATURAL ASPECT RATIO)
+   -------------------------------------------------------------------------- */
+.gallery-grid {
+  column-count: 3;
+  column-gap: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
+.gallery-grid .ph {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  aspect-ratio: auto;
+  display: block;
+  height: auto;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-grid .ph:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-grid .ph img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   11. FORMS & INPUTS
+   -------------------------------------------------------------------------- */
+.form-control,
+.form-select {
+  background: var(--concrete);
+  border-color: var(--border-color);
+  color: var(--white);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--surface-elevated);
+  border-color: var(--yellow);
+  color: var(--white);
+  box-shadow: 0 0 0 0.25rem rgba(246, 202, 56, 0.25);
+}
+
+legend {
+  font-family: var(--font-heading);
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER
+   -------------------------------------------------------------------------- */
+.zss-footer {
+  background: #101012;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--concrete);
+}
+
+.zss-footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.zss-footer a:hover {
+  color: var(--yellow);
+}
+
+/* --------------------------------------------------------------------------
+   13. BACKWARD-COMPATIBILITY ALIASES (FOR REGISTER.HTML BEFORE EDIT)
+   -------------------------------------------------------------------------- */
+.site-skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--yellow);
+  color: #000000;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  z-index: 2000;
+}
+
+.site-skip-link:focus {
+  left: 0;
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1030;
-  background-color: rgba(23, 23, 25, 0.94);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(23, 23, 25, 0.95);
+  border-bottom: 1px solid var(--concrete);
 }
 
 .site-navbar {
-  padding-block: var(--space-3);
+  padding-block: 0.5rem;
 }
 
 .site-navbar-inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-2);
 }
 
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  min-height: 2.75rem;
-  padding-block: var(--space-1);
-  color: var(--color-pure-white);
-}
-
-.site-brand:hover,
-.site-brand:focus-visible {
-  color: var(--color-skate-yellow);
+  gap: 0.75rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .site-brand-logo {
   width: 2.25rem;
   height: 2.25rem;
-  flex-shrink: 0;
-}
-
-.site-brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.site-brand-name {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.site-brand-sub {
-  font-size: var(--text-xs);
-  color: var(--color-muted-text);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.site-navbar-toggler {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  padding: var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  color: var(--color-pure-white);
-  background-color: var(--color-surface);
-}
-
-.site-navbar-toggler:hover,
-.site-navbar-toggler:focus-visible {
-  border-color: var(--color-skate-yellow);
-  color: var(--color-skate-yellow);
+  object-fit: contain;
 }
 
 .site-nav-list {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  padding-top: var(--space-4);
+  gap: 0.5rem;
+  list-style: none;
   margin: 0;
 }
 
 .site-nav-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  min-width: 2.75rem;
-  padding: var(--space-2) var(--space-3);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-muted-text);
-  border-radius: var(--radius-sm);
-}
-
-.site-nav-link:hover,
-.site-nav-link:focus-visible {
-  color: var(--color-pure-white);
-  background-color: var(--color-concrete);
+  color: var(--white);
+  padding: 0.5rem 0.75rem;
 }
 
 .site-nav-link.active,
 .site-nav-link[aria-current="page"] {
-  color: var(--color-pure-white);
+  color: var(--yellow);
+  box-shadow: inset 0 -3px var(--purple);
 }
 
-.site-nav-link.active::after,
-.site-nav-link[aria-current="page"]::after {
-  content: "";
-  position: absolute;
-  left: var(--space-3);
-  right: var(--space-3);
-  bottom: 0.35rem;
-  height: 2px;
-  background-color: var(--color-street-purple);
-}
-
-.site-nav-cta-wrap {
-  padding-top: var(--space-3);
-}
-
-.site-nav-cta {
-  width: 100%;
-}
-
-/* Global Footer */
-.site-footer {
-  background-color: var(--color-surface-elevated);
-  border-top: 1px solid var(--color-border);
-  padding-block: var(--space-16) var(--space-8);
-}
-
-.site-footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "brand"
-    "nav"
-    "connect";
-  gap: var(--space-8);
-}
-
-.site-footer-brand {
-  grid-area: brand;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.site-footer-tagline {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--color-skate-yellow);
-  margin-bottom: 0;
-}
-
-.site-footer-nav {
-  grid-area: nav;
-}
-
-.site-footer-connect {
-  grid-area: connect;
-}
-
-.site-footer-heading {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-pure-white);
-  margin-bottom: var(--space-4);
-}
-
-.site-footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.site-footer-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 2.75rem;
-  color: var(--color-muted-text);
-  font-size: var(--text-sm);
-}
-
-.site-footer-link:hover,
-.site-footer-link:focus-visible {
-  color: var(--color-skate-yellow);
-}
-
-.site-footer-meta {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--color-muted-text);
-  font-size: var(--text-sm);
-  margin-bottom: var(--space-2);
-}
-
-.site-footer-bottom {
-  margin-top: var(--space-12);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  font-size: var(--text-xs);
-  color: var(--color-muted-text);
-}
-
-/* ==========================================================================
-   5. HOME — FARHAN
-   ========================================================================== */
-.home-hero {
-  position: relative;
-  padding-block: var(--space-12) var(--space-16);
-  background: radial-gradient(circle at 85% 15%, rgba(150, 59, 206, 0.22), transparent 50%),
-    var(--color-ink-black);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.home-hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "content"
-    "media";
-  gap: var(--space-8);
-  align-items: center;
-}
-
-.home-hero-content {
-  grid-area: content;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-5);
-}
-
-.home-hero-title {
-  margin-bottom: 0;
-  text-transform: uppercase;
-  line-height: 0.98;
-}
-
-.home-hero-title-accent {
-  display: block;
-  color: var(--color-street-purple-tint);
-}
-
-.home-hero-subtitle {
-  font-size: var(--text-lg);
-  color: var(--color-muted-text);
-  max-width: 52ch;
-  margin-bottom: 0;
-}
-
-.home-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  width: 100%;
-}
-
-.home-hero-actions .site-btn {
-  width: 100%;
-}
-
-.home-hero-media {
-  grid-area: media;
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-concrete);
-}
-
-.home-hero-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.home-hero-badge {
-  position: absolute;
-  left: var(--space-4);
-  bottom: var(--space-4);
-  z-index: 2;
-  padding: var(--space-2) var(--space-3);
-  background-color: rgba(23, 23, 25, 0.88);
-  border: 1px solid var(--color-street-purple);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-pure-white);
-}
-
-/* Home Section 3: About Preview */
-.home-about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  align-items: center;
-}
-
-.home-about-media {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-
-.home-about-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.home-about-tag {
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
-}
-
-.home-about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-4);
-}
-
-/* Home Section 4: Activities Preview */
-.home-activities-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-.home-activity-media {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-concrete);
-}
-
-.home-activity-img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform var(--transition-base);
-}
-
-.site-card:hover .home-activity-img {
-  transform: scale(1.04);
-}
-
-.home-activity-badge {
-  position: absolute;
-  top: var(--space-3);
-  left: var(--space-3);
-}
-
-.home-activity-title {
-  font-size: var(--text-xl);
-  margin-bottom: 0;
-}
-
-.home-activity-desc {
-  margin-bottom: 0;
-  flex: 1 1 auto;
-}
-
-/* Home Section 5: Weekly Schedule Preview */
-.home-schedule-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-.home-schedule-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-6);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-street-purple);
-  border-radius: var(--radius-md);
-}
-
-.home-schedule-day {
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-skate-yellow);
-  margin-bottom: var(--space-1);
-}
-
-.home-schedule-spot {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-2);
-}
-
-.home-schedule-time {
-  font-size: var(--text-sm);
-  color: var(--color-muted-text);
-  margin-bottom: 0;
-}
-
-.home-schedule-note {
-  margin-top: var(--space-6);
-  padding: var(--space-4) var(--space-5);
-  background-color: var(--color-concrete);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  color: var(--color-muted-text);
-}
-
-/* Home Section 6: Community Highlights (Verified Facts Only) */
-.home-highlights-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-.home-highlight-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-6);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.home-highlight-icon {
-  font-size: 1.5rem;
-  color: var(--color-neon-pink);
-}
-
-.home-highlight-label {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--color-pure-white);
-  margin-bottom: 0;
-}
-
-.home-highlight-text {
-  font-size: var(--text-sm);
-  margin-bottom: 0;
-}
-
-/* Home Section 7: Join Community CTA */
-.home-cta-panel {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  padding: var(--space-8);
-  background: linear-gradient(135deg, var(--color-concrete) 0%, var(--color-surface) 60%, rgba(150, 59, 206, 0.28) 100%);
-  border: 1px solid var(--color-street-purple);
-  border-radius: var(--radius-lg);
-}
-
-.home-cta-actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  align-items: stretch;
-}
-
-.home-cta-note {
-  font-size: var(--text-xs);
-  color: var(--color-muted-text);
-  margin-bottom: 0;
-}
-
-/* ==========================================================================
-   6. ACTIVITIES — FARHAN
-   ========================================================================== */
-.activities-hero {
-  padding-block: var(--space-12) var(--space-10);
-  background: radial-gradient(circle at 15% 20%, rgba(240, 68, 155, 0.16), transparent 45%),
-    var(--color-ink-black);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.activities-hero-title {
-  max-width: 18ch;
-  text-transform: uppercase;
-}
-
-/* Section 2: Activities Catalog (CSS Grid) */
-.activities-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-.activities-card-media {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-concrete);
-}
-
-.activities-card-img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform var(--transition-base);
-}
-
-.activities-card:hover .activities-card-img {
-  transform: scale(1.04);
-}
-
-.activities-card-badge {
-  position: absolute;
-  bottom: var(--space-3);
-  left: var(--space-3);
-}
-
-.activities-card-title {
-  font-size: var(--text-h3);
-  margin-bottom: 0;
-}
-
-.activities-card-desc {
-  margin-bottom: 0;
-  flex: 1 1 auto;
-}
-
-.activities-card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--color-border);
-  font-size: var(--text-xs);
-  color: var(--color-muted-text);
-}
-
-/* Section 3: Weekly Schedule Table */
-.activities-table-wrap {
-  width: 100%;
-  overflow-x: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background-color: var(--color-surface);
-}
-
-.activities-table {
-  width: 100%;
-  margin-bottom: 0;
-  border-collapse: collapse;
-  color: var(--color-pure-white);
-}
-
-.activities-table caption {
-  padding: var(--space-4) var(--space-5);
-  caption-side: top;
-  text-align: left;
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--color-muted-text);
-  background-color: var(--color-concrete);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.activities-table thead th {
-  padding: var(--space-4) var(--space-5);
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-skate-yellow);
-  background-color: var(--color-surface-elevated);
-  border-bottom: 1px solid var(--color-border);
-  white-space: nowrap;
-}
-
-.activities-table tbody td {
-  padding: var(--space-4) var(--space-5);
-  border-bottom: 1px solid var(--color-border);
-  vertical-align: middle;
-  font-size: var(--text-sm);
-  color: var(--color-pure-white);
-}
-
-.activities-table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.activities-table tbody tr:hover {
-  background-color: rgba(150, 59, 206, 0.12);
-}
-
-/* Section 4: Beginner Friendly */
-.activities-beginner-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  align-items: start;
-}
-
-.activities-beginner-card {
-  padding: var(--space-6);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.activities-checklist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.activities-checklist-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  color: var(--color-pure-white);
-  font-size: var(--text-base);
-}
-
-.activities-checklist-icon {
-  color: var(--color-skate-yellow);
-  font-size: 1.125rem;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-
-/* Section 5: Join Session CTA */
-.activities-cta-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-5);
-  padding: var(--space-8);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-street-purple);
-  border-radius: var(--radius-lg);
-}
-
-/* ==========================================================================
-   7. REGISTER — GANSA
-   Catatan Kontrak: Gansa menambahkan styling khusus register.html di sini.
-   Gunakan prefix class .register-* dan hindari ID selector / !important.
-   ========================================================================== */
-/* ==========================================================================
-   8. About — Gansa (.about-*)
-   ========================================================================== */
-/* Hero Banner bergaya Urban Skatepark (Junction 4 Vibe) */
-.about-hero {
-  position: relative;
-  background-color: var(--color-surface);
-  border-bottom: 2px solid var(--color-border);
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
-  overflow: hidden;
-}
-
-.about-hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-10);
-  align-items: center;
-}
-
-.about-title {
-  font-size: 2.5rem;
-  line-height: 1.05;
-  margin-bottom: var(--space-5);
-  text-transform: uppercase;
-}
-
-.about-title-highlight {
-  color: var(--color-skate-yellow);
-  text-decoration: underline;
-  text-decoration-color: var(--color-neon-pink);
-  text-underline-offset: var(--space-2);
-}
-
-.about-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  margin-top: var(--space-8);
-}
-
-/* Statistik Komunitas */
-.about-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-}
-
-.about-stat-card {
-  background-color: var(--color-ink-black);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-6);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.about-stat-card:hover {
-  border-color: var(--color-skate-yellow);
-  transform: translateY(-4px);
-}
-
-.about-stat-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-neon-pink);
-  margin-bottom: var(--space-2);
-}
-
-.about-stat-label {
-  font-family: var(--font-heading);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-pure-white);
-}
-
-/* Bagian Cerita & Visi Misi */
-.about-story-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-10);
-  align-items: start;
-}
-
-.about-panel {
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
-}
-
-.about-panel-accent {
-  border-left: var(--space-2) solid var(--color-street-purple);
-}
-
-.about-section-title {
-  font-size: 1.875rem;
-  margin-bottom: var(--space-4);
-}
-
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: var(--space-6) 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.about-list-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  color: var(--color-muted-text);
-}
-
-.about-list-icon {
-  color: var(--color-skate-yellow);
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
-/* Nilai & Kultur Komunitas (Pillar Cards) */
-.about-section-header {
-  margin-bottom: var(--space-10);
-}
-
-.about-values-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-.about-value-card {
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-8);
-  position: relative;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.about-value-card:hover {
-  border-color: var(--color-street-purple);
-  transform: translateY(-4px);
-}
-
-.about-value-icon {
-  width: var(--space-12);
-  height: var(--space-12);
+.site-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-concrete);
-  color: var(--color-skate-yellow);
+  padding: 0.5rem 1.25rem;
   border-radius: var(--radius-sm);
-  font-size: 1.5rem;
-  margin-bottom: var(--space-5);
-}
-
-.about-value-title {
-  font-size: 1.25rem;
-  margin-bottom: var(--space-3);
-}
-
-/* Divisi / Disiplin Skate (Junction 4 Facility Card Style) */
-.about-disciplines-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-.about-discipline-card {
-  background-color: var(--color-concrete);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.about-discipline-tag {
-  align-self: flex-start;
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background-color: var(--color-ink-black);
-  color: var(--color-neon-pink);
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--space-4);
 }
 
-/* Call to Action Banner */
-.about-cta-banner {
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-street-purple);
-  border-radius: var(--radius-lg);
-  padding: var(--space-10);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-  align-items: flex-start;
-  justify-content: space-between;
+.site-btn-primary {
+  background: var(--purple);
+  color: var(--white);
+  border: 0;
 }
 
-.about-cta-title {
-  font-size: 2rem;
-  margin-bottom: var(--space-2);
+.site-btn-primary:hover {
+  background: var(--pink);
+  color: var(--white);
 }
 
-/* Responsive Layout for About Page (Section 8 — Gansa) */
-@media (min-width: 48rem) {
-  .about-story-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-values-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about-disciplines-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about-cta-banner {
-    flex-direction: row;
-    align-items: center;
-  }
+.site-section {
+  padding: clamp(4rem, 9vw, 7.5rem) 0;
 }
 
-@media (min-width: 64rem) {
-  .about-hero-grid {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: var(--space-12);
-  }
-
-  .about-title {
-    font-size: 3.25rem;
-  }
-}
-/* ==========================================================================
-   8. ABOUT — GANSA
-   Catatan Kontrak: Gansa menambahkan styling khusus about.html di sini.
-   Gunakan prefix class .about-* dan hindari ID selector / !important.
-   ========================================================================== */
-
-/* ==========================================================================
-   9. GALLERY — RIVAN
-   Catatan Kontrak: Rivan menambahkan styling khusus gallery.html di sini.
-   Gunakan prefix class .gallery-* dengan card layout dan CSS Grid.
-   ========================================================================== */
-.gallery-container {
+.site-container {
   width: 100%;
-  max-width: 100%;
+  max-width: 75rem;
   margin-inline: auto;
-  padding-inline: var(--space-4);
+  padding-inline: 1.25rem;
 }
 
-.gallery-hero {
-  position: relative;
-  min-height: 16rem;
-  display: flex;
-  align-items: center;
-  background-color: var(--color-ink-black);
-  border-bottom: 1px solid var(--color-border);
-  padding-block: var(--space-12);
-  overflow: hidden;
-}
-
-.gallery-hero-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  z-index: 1;
-}
-
-.gallery-hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(rgba(23, 23, 25, 0.45), rgba(23, 23, 25, 0.7));
-  pointer-events: none;
-}
-
-.gallery-hero-content {
-  position: relative;
-  z-index: 3;
-}
-
-.gallery-hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 1.8rem + 3.5vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-pure-white);
-  margin-bottom: 0;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
-}
-
-.gallery-section {
-  padding-block: var(--space-8) var(--space-16);
-  background:
-    radial-gradient(ellipse at top left, rgba(240, 68, 155, 0.18), transparent 45%),
-    radial-gradient(ellipse at bottom right, rgba(246, 202, 56, 0.14), transparent 45%),
-    linear-gradient(180deg, #1d1b24 0%, var(--color-ink-black) 100%);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: var(--space-4);
-  width: 100%;
-}
-
-/* Gallery Photo Card Component */
-.gallery-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+.site-starter-box {
+  padding: 2rem;
+  background: var(--concrete);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition:
-    transform var(--transition-base),
-    border-color var(--transition-base),
-    box-shadow var(--transition-base);
+  border: 1px solid var(--border-color);
 }
 
-.gallery-card:hover,
-.gallery-card:focus-within {
-  transform: translateY(-8px);
-  border-color: var(--color-street-purple);
-  box-shadow: 0 16px 36px rgba(150, 59, 206, 0.4);
+.site-footer {
+  background: #101012;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--concrete);
 }
 
-.gallery-card-media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background-color: var(--color-concrete);
-}
-
-.gallery-card-img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-  transition: transform var(--transition-base), filter var(--transition-base);
-}
-
-.gallery-card:hover .gallery-card-img,
-.gallery-card:focus-within .gallery-card-img {
-  transform: scale(1.08);
-  filter: brightness(1.06);
-}
-
-/* ==========================================================================
-   10. RESPONSIVE (MOBILE-FIRST BREAKPOINTS: 48rem & 64rem)
-   ========================================================================== */
-
-/* Tablet: >= 48rem (768px) */
-@media (min-width: 48rem) {
-  .site-container {
-    padding-inline: var(--space-8); /* Tablet: 32px */
-  }
-
-  .site-brand {
-    gap: var(--space-3);
-  }
-
-  .site-brand-logo {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .site-brand-name {
-    font-size: var(--text-base);
-  }
-
-  .site-section {
-    padding-block: var(--space-24); /* 96px */
-  }
-
-  .home-hero-actions .site-btn {
-    width: auto;
-  }
-
-  .home-activities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-schedule-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-cta-panel {
-    grid-template-columns: 1.25fr 0.75fr;
-    align-items: center;
-    padding: var(--space-10);
-  }
-
-  .activities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .activities-beginner-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .activities-cta-panel {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--space-10);
-  }
-
-  .gallery-hero {
-    min-height: 20rem;
-    padding-block: var(--space-16);
-  }
-
-  .gallery-container {
-    padding-inline: var(--space-5);
-  }
-
-  .gallery-grid {
-    gap: var(--space-4);
-  }
-
-  .site-footer-grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
-    grid-template-areas: "brand nav connect";
-  }
-
-  .site-footer-bottom {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-/* Desktop: >= 64rem (1024px) */
-@media (min-width: 64rem) {
-  .site-container {
-    padding-inline: var(--space-16); /* Desktop: 64px */
-  }
-
-  .site-section {
-    padding-block: var(--space-30); /* Desktop: 120px */
-  }
-
-  .site-nav-list {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-2);
-    padding-top: 0;
-  }
-
-  .site-nav-cta-wrap {
-    padding-top: 0;
-    margin-left: var(--space-2);
-  }
-
-  .site-nav-cta {
-    width: auto;
-  }
-
-  /* Asymmetrical Editorial Hero Grid using grid-template-areas */
-  .home-hero {
-    padding-block: var(--space-16) var(--space-24);
-  }
-
-  .home-hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
-    grid-template-areas: "content media";
-    gap: var(--space-12);
-  }
-
-  .home-about-grid {
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: var(--space-12);
-  }
-
-  /* Asymmetrical 12-column editorial layout for Activities Preview */
-  .home-activities-grid {
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-6);
-  }
-
-  .home-activity-card-wide {
-    grid-column: span 7;
-  }
-
-  .home-activity-card-narrow {
-    grid-column: span 5;
-  }
-
-  .home-schedule-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-  }
-
-  .home-highlights-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-6);
-  }
-
-  .gallery-hero {
-    min-height: 24rem;
-    padding-block: var(--space-20);
-  }
-
-  .gallery-container {
-    padding-inline: var(--space-6);
-  }
-
-  .gallery-grid {
-    gap: var(--space-4);
-  }
-
-  .site-footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: var(--space-12);
-  }
-}
-
-/* ==========================================================================
-   11. DARK MODE
-   ========================================================================== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-ink-black: #171719;
-    --color-surface: #252529;
-    --color-surface-elevated: #1e1e22;
-    --color-concrete: #303035;
-    --color-pure-white: #ffffff;
-    --color-muted-text: #b8b8be;
-    --color-border: #414148;
-  }
-}
-
-/* ==========================================================================
-   12. REDUCED MOTION
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   14. REDUCED MOTION
+   -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms;
-    animation-iteration-count: 1;
-    transition-duration: 0.01ms;
-    scroll-behavior: auto;
-  }
-
-  .site-card:hover,
-  .site-btn-primary:hover,
-  .site-btn-secondary:hover,
-  .site-btn-yellow:hover,
-  .site-card:hover .home-activity-img,
-  .activities-card:hover .activities-card-img,
-  .gallery-card:hover,
-  .gallery-card:hover .gallery-card-img {
-    transform: none;
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
   }
 }

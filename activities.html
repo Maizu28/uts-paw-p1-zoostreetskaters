@@ -1,495 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Activities &amp; Schedule — Zoo Street Skaters Surabaya</title>
-    <meta
-      name="description"
-      content="Jelajahi aktivitas inline skating Zoo Street Skaters Surabaya: Freestyle Slalom, Urban Skating, Skate Park, Community Gathering, serta jadwal mingguan dan panduan pemula."
-    />
-    <link rel="icon" type="image/svg+xml" href="img/logo/Logo_zoo_lama.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <a class="site-skip-link" href="#main-content">Lewati ke konten utama</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities | Zoo Street Skaters</title>
+  <meta name="description" content="Zoo Street Skaters: komunitas inline skating di Surabaya. Roll together. Grow together.">
+  <link rel="icon" type="image/png" href="img/logo/Logo_zoo_lama.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-    <!-- Global Navigation -->
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-dark site-navbar" aria-label="Navigasi utama">
-        <div class="site-container site-navbar-inner">
-          <a class="site-brand" href="index.html">
-            <img
-              class="site-brand-logo"
-              src="img/logo/Logo_zoo_lama.png"
-              alt="Logo Zoo Street Skaters"
-              width="40"
-              height="40"
-            />
-            <span class="site-brand-text">
-              <span class="site-brand-name">Zoo Street Skaters</span>
-              <span class="site-brand-sub">Surabaya</span>
-            </span>
-          </a>
-
-          <button
-            class="navbar-toggler site-navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Buka menu navigasi"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav site-nav-list">
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link site-nav-link active"
-                  href="activities.html"
-                  aria-current="page"
-                >
-                  Activities
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="register.html">Register</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link site-nav-link" href="gallery.html">Gallery</a>
-              </li>
-              <li class="nav-item site-nav-cta-wrap">
-                <a class="btn site-btn site-btn-primary site-nav-cta" href="register.html">
-                  Join Community
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main-content">
-      <!-- Section 1: Activities Hero -->
-      <section class="activities-hero" aria-labelledby="activities-hero-heading">
-        <div class="site-container">
-          <div class="site-section-header mb-0">
-            <span class="site-eyebrow">Activities &amp; Sessions</span>
-            <h1 class="activities-hero-title" id="activities-hero-heading">
-              EXPLORE THE WAY YOU SKATE.
-            </h1>
-            <p class="site-lead mb-0">
-              Discover different skating activities and find the style that suits you.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2: Activities Catalog -->
-      <section class="site-section" aria-labelledby="catalog-heading">
-        <div class="site-container">
-          <div class="site-section-header">
-            <span class="site-eyebrow">Katalog Aktivitas</span>
-            <h2 id="catalog-heading">FOUR CORE SKATING ACTIVITIES.</h2>
-            <p class="site-lead">
-              Pilih aktivitas yang paling sesuai dengan tujuan berlatih dan suasana bermain sepatu
-              roda yang kamu sukai.
-            </p>
-          </div>
-
-          <div class="activities-grid">
-            <article class="card site-card activities-card" id="freestyle">
-              <div class="activities-card-media">
-                <img
-                  class="activities-card-img"
-                  src="img/activities/freestyle.jpg"
-                  srcset="img/activities/freestyle-640.jpg 640w, img/activities/freestyle.jpg 1376w"
-                  sizes="(min-width: 48rem) 46vw, 100vw"
-                  alt="Latihan Freestyle Slalom melewati deretan cone pada permukaan aspal"
-                  width="1376"
-                  height="768"
-                  loading="lazy"
-                />
-                <span class="badge site-badge site-badge-purple activities-card-badge">
-                  Teknik &amp; Kontrol
-                </span>
-              </div>
-              <div class="card-body site-card-body">
-                <h3 class="card-title activities-card-title">Freestyle Slalom</h3>
-                <p class="card-text activities-card-desc">
-                  Latihan teknik melewati cone, keseimbangan, koordinasi, dan kontrol sepatu roda.
-                </p>
-                <div class="activities-card-meta">
-                  <span class="badge site-badge site-badge-concrete">Cone Drills</span>
-                  <span class="badge site-badge site-badge-concrete">Balance &amp; Control</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card site-card activities-card" id="urban">
-              <div class="activities-card-media">
-                <img
-                  class="activities-card-img"
-                  src="img/activities/urban.jpg"
-                  srcset="img/activities/urban-640.jpg 640w, img/activities/urban.jpg 1376w"
-                  sizes="(min-width: 48rem) 46vw, 100vw"
-                  alt="Skater meluncur dalam aktivitas Urban Skating di kawasan perkotaan Surabaya"
-                  width="1376"
-                  height="768"
-                  loading="lazy"
-                />
-                <span class="badge site-badge site-badge-pink activities-card-badge">
-                  Street &amp; City Roll
-                </span>
-              </div>
-              <div class="card-body site-card-body">
-                <h3 class="card-title activities-card-title">Urban Skating</h3>
-                <p class="card-text activities-card-desc">
-                  Aktivitas inline skating di area perkotaan.
-                </p>
-                <div class="activities-card-meta">
-                  <span class="badge site-badge site-badge-concrete">City Route</span>
-                  <span class="badge site-badge site-badge-concrete">Group Ride</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card site-card activities-card" id="skatepark">
-              <div class="activities-card-media">
-                <img
-                  class="activities-card-img"
-                  src="img/activities/skatepark.jpg"
-                  srcset="img/activities/skatepark-640.jpg 640w, img/activities/skatepark.jpg 1264w"
-                  sizes="(min-width: 48rem) 46vw, 100vw"
-                  alt="Aktivitas Skate Park mengeksplorasi gerakan dan lintasan ramp"
-                  width="1264"
-                  height="848"
-                  loading="lazy"
-                />
-                <span class="badge site-badge site-badge-yellow activities-card-badge">
-                  Park &amp; Ramp
-                </span>
-              </div>
-              <div class="card-body site-card-body">
-                <h3 class="card-title activities-card-title">Skate Park</h3>
-                <p class="card-text activities-card-desc">
-                  Eksplorasi teknik dan gerakan skating di skatepark.
-                </p>
-                <div class="activities-card-meta">
-                  <span class="badge site-badge site-badge-concrete">Ramp Exploration</span>
-                  <span class="badge site-badge site-badge-concrete">Skatepark Session</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card site-card activities-card" id="gathering">
-              <div class="activities-card-media">
-                <img
-                  class="activities-card-img"
-                  src="img/activities/gathering.jpg"
-                  srcset="img/activities/gathering-640.jpg 640w, img/activities/gathering.jpg 1376w"
-                  sizes="(min-width: 48rem) 46vw, 100vw"
-                  alt="Community Gathering bersama anggota Zoo Street Skaters di ruang publik"
-                  width="1376"
-                  height="768"
-                  loading="lazy"
-                />
-                <span class="badge site-badge site-badge-concrete activities-card-badge">
-                  Sosial &amp; Komunitas
-                </span>
-              </div>
-              <div class="card-body site-card-body">
-                <h3 class="card-title activities-card-title">Community Gathering</h3>
-                <p class="card-text activities-card-desc">
-                  Kegiatan sosial, berkumpul, dan bermain sepatu roda bersama anggota komunitas.
-                </p>
-                <div class="activities-card-meta">
-                  <span class="badge site-badge site-badge-concrete">Meetup</span>
-                  <span class="badge site-badge site-badge-concrete">All Levels</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3: Weekly Schedule -->
-      <section
-        class="site-section site-section-alt"
-        id="schedule-section"
-        aria-labelledby="weekly-schedule-heading"
-      >
-        <div class="site-container">
-          <div class="site-section-header">
-            <span class="site-eyebrow">Jadwal Mingguan</span>
-            <h2 id="weekly-schedule-heading">WHEN &amp; WHERE WE SKATE.</h2>
-            <p class="site-lead">
-              Berikut jadwal rutin berdasarkan informasi profil komunitas. Jam latihan akan
-              diperbarui setelah dikonfirmasi resmi oleh pengelola.
-            </p>
-          </div>
-
-          <div class="activities-table-wrap">
-            <table class="table table-dark activities-table">
-              <caption>
-                Jadwal Sesi Mingguan Zoo Street Skaters Surabaya (Waktu latihan menunggu konfirmasi
-                resmi pengelola)
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Day</th>
-                  <th scope="col">Session</th>
-                  <th scope="col">Location</th>
-                  <th scope="col">Time</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Selasa Malam</strong></td>
-                  <td>Community Skate Session</td>
-                  <td>Balai Kota Surabaya</td>
-                  <td>
-                    <span class="badge site-badge site-badge-concrete">Time to be confirmed</span>
-                  </td>
-                  <td>
-                    <a
-                      class="site-inline-link"
-                      href="https://www.google.com/maps/search/?api=1&query=Balai+Kota+Surabaya"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Lihat lokasi Balai Kota Surabaya di Google Maps"
-                    >
-                      Google Maps
-                      <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Jumat Malam</strong></td>
-                  <td>Skate Park Session</td>
-                  <td>Skatepark Monkasel</td>
-                  <td>
-                    <span class="badge site-badge site-badge-concrete">Time to be confirmed</span>
-                  </td>
-                  <td>
-                    <a
-                      class="site-inline-link"
-                      href="https://www.google.com/maps/search/?api=1&query=Skatepark+Monkasel+Surabaya"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Lihat lokasi Skatepark Monkasel di Google Maps"
-                    >
-                      Google Maps
-                      <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Minggu Pagi</strong></td>
-                  <td>CFD Roll &amp; Gathering</td>
-                  <td>CFD Taman Bungkul</td>
-                  <td>
-                    <span class="badge site-badge site-badge-concrete">Time to be confirmed</span>
-                  </td>
-                  <td>
-                    <a
-                      class="site-inline-link"
-                      href="https://www.google.com/maps/search/?api=1&query=Taman+Bungkul+Surabaya"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Lihat lokasi CFD Taman Bungkul di Google Maps"
-                    >
-                      Google Maps
-                      <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4: Beginner Friendly -->
-      <section class="site-section" aria-labelledby="beginner-heading">
-        <div class="site-container">
-          <div class="site-section-header">
-            <span class="site-eyebrow">Panduan Pemula</span>
-            <h2 id="beginner-heading">NEVER SKATED BEFORE?</h2>
-            <p class="site-lead">
-              Kamu tetap bisa bergabung meskipun baru pertama kali mencoba olahraga inline skating.
-            </p>
-          </div>
-
-          <div class="activities-beginner-grid">
-            <article class="activities-beginner-card">
-              <h3>Suasana Ramah untuk Pemula</h3>
-              <ul class="activities-checklist">
-                <li class="activities-checklist-item">
-                  <i class="bi bi-check-circle-fill activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Tidak harus profesional:</strong> semua anggota datang dari berbagai
-                    tingkat pengalaman, termasuk yang baru memulai.
-                  </span>
-                </li>
-                <li class="activities-checklist-item">
-                  <i class="bi bi-check-circle-fill activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Bisa mulai belajar dari dasar:</strong> mulai dari menjaga keseimbangan,
-                    posisi berdiri yang aman, hingga cara berhenti dengan nyaman (ada yang mendampingi saat belajar 100% Gratis).
-                  </span>
-                </li>
-                <li class="activities-checklist-item">
-                  <i class="bi bi-check-circle-fill activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Bisa mengikuti kegiatan komunitas:</strong> kamu dapat langsung hadir
-                    dalam sesi berkumpul bersama anggota untuk saling mengenal dan berlatih bareng.
-                  </span>
-                </li>
-                
-              </ul>
-            </article>
-
-            <article class="activities-beginner-card">
-              <h3>Perlengkapan yang Perlu Disiapkan</h3>
-              <ul class="activities-checklist">
-                <li class="activities-checklist-item">
-                  <i class="bi bi-shield-check activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Sepatu roda inline pribadi</strong> dengan ukuran pas dan roda yang
-                    berfungsi baik (Jika tidak punya bisa pinjam untuk mencoba & tidak dipungut biaya).
-                  </span>
-                </li>
-                <li class="activities-checklist-item">
-                  <i class="bi bi-shield-check activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Helm dan set pelindung (protector):</strong> pelindung lutut, siku, dan
-                    pergelangan tangan sangat dianjurkan demi keselamatan selama sesi latihan.
-                  </span>
-                </li>
-                <li class="activities-checklist-item">
-                  <i class="bi bi-shield-check activities-checklist-icon" aria-hidden="true"></i>
-                  <span>
-                    <strong>Air minum pribadi</strong> agar tetap
-                    terhidrasi saat beraktivitas di luar ruangan.
-                  </span>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 5: Join Session CTA -->
-      <section class="site-section site-section-alt" aria-labelledby="activities-cta-heading">
-        <div class="site-container">
-          <div class="activities-cta-panel">
-            <div>
-              <span class="site-eyebrow">Ikut Sesi Berikutnya</span>
-              <h2 class="mb-2" id="activities-cta-heading">LET'S SKATE TOGETHER.</h2>
-              <p class="site-lead mb-0">
-                Daftarkan dirimu sebagai anggota komunitas melalui halaman registrasi kami.
-              </p>
-            </div>
-            <a class="btn site-btn site-btn-yellow" href="register.html">
-              Daftar di Halaman Register
-              <i class="bi bi-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Global Footer -->
-    <footer class="site-footer">
-      <div class="site-container">
-        <div class="site-footer-grid">
-          <div class="site-footer-brand">
-            <a class="site-brand" href="index.html">
-              <img
-                class="site-brand-logo"
-                src="img/logo/Logo_zoo_lama.png"
-                alt="Logo Zoo Street Skaters"
-                width="40"
-                height="40"
-              />
-              <span class="site-brand-text">
-                <span class="site-brand-name">Zoo Street Skaters</span>
-                <span class="site-brand-sub">Surabaya, Indonesia</span>
-              </span>
-            </a>
-            <p class="site-footer-tagline">ROLL TOGETHER. GROW TOGETHER.</p>
-            <p class="mb-0">
-              Komunitas inline skating urban di Surabaya yang terbuka untuk pemula hingga skater
-              berpengalaman.
-            </p>
-          </div>
-
-          <div class="site-footer-nav">
-            <h2 class="site-footer-heading">Navigasi</h2>
-            <ul class="site-footer-list">
-              <li><a class="site-footer-link" href="index.html">Home</a></li>
-              <li><a class="site-footer-link" href="activities.html">Activities</a></li>
-              <li><a class="site-footer-link" href="register.html">Register</a></li>
-              <li><a class="site-footer-link" href="about.html">About</a></li>
-              <li><a class="site-footer-link" href="gallery.html">Gallery</a></li>
-            </ul>
-          </div>
-
-          <div class="site-footer-connect">
-            <h2 class="site-footer-heading">Komunitas</h2>
-            <p class="site-footer-meta">
-              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-              <span>Surabaya, Jawa Timur, Indonesia</span>
-            </p>
-            <p class="site-footer-meta">
-              <i class="bi bi-instagram" aria-hidden="true"></i>
-              <span>Instagram: Menunggu tautan resmi pengelola</span>
-            </p>
-            <p class="site-footer-meta">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i>
-              <span>WhatsApp: Menunggu tautan resmi pengelola</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="site-footer-bottom">
-          <p class="mb-0">&copy; 2026 Zoo Street Skaters Surabaya. All rights reserved.</p>
-          <p class="mb-0">Urban Skate Community Website — Surabaya, Indonesia</p>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top zss-nav" aria-label="Navigasi utama">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ZOO STREET SKATERS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="activities.html" aria-current="page">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-zss" href="register.html">Join Community</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <main id="main">
+    <!-- Section 1: Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="display-font">EXPLORE THE WAY YOU SKATE.</h1>
+        <p class="lead">Empat cara bermain inline skating bersama komunitas. Pilih yang paling cocok denganmu.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Catalog -->
+    <section class="section">
+      <div class="container">
+        <h2 class="display-font mb-4">OUR CORE ACTIVITIES.</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Aksi Freestyle Slalom melewati cone">
+                <img src="img/activities/slalom_1.png" alt="Aksi Freestyle Slalom melewati cone" width="355" height="454" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">Freestyle Slalom</h3>
+                <p class="mb-0 text-secondary">Teknik melewati cone: keseimbangan, koordinasi, kontrol, dan variasi gerakan.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Aktivitas Urban Skating di jalanan Surabaya">
+                <img src="img/activities/hotel_majapahit_1.jpg" alt="Aktivitas Urban Skating di Jl. Tunjungan depan Hotel Majapahit" width="2160" height="2323" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">Urban Skating</h3>
+                <p class="mb-0 text-secondary">Bermain sepatu roda sambil menjelajahi berbagai area di perkotaan.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Sesi Skate Park di Skatepark Ketabang">
+                <img src="img/activities/skatepark_ketabang_1.png" alt="Sesi bermain inline skate di Skatepark Ketabang Surabaya" width="593" height="889" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">Skate Park</h3>
+                <p class="mb-0 text-secondary">Eksplorasi gerakan, teknik, dan fasilitas skatepark.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <article class="card zss-card h-100">
+              <div class="ph" role="img" aria-label="Sesi berkumpul Community Gathering">
+                <img src="img/activities/76_Heppi.jpg" alt="Sesi kumpul dan bermain bersama komunitas Zoo Street Skaters" width="1194" height="1272" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5">Community Gathering</h3>
+                <p class="mb-0 text-secondary">Berkumpul, bermain bersama, bertukar pengalaman, dan mempererat pertemanan.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Weekly Sessions Table -->
+    <section class="section alt">
+      <div class="container">
+        <h2 class="display-font mb-4">WHEN &amp; WHERE WE SKATE.</h2>
+        <div class="table-responsive">
+          <table class="table zss-table align-middle">
+            <caption>Jadwal sesi latihan mingguan Zoo Street Skaters.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Session</th>
+                <th scope="col">Location</th>
+                <th scope="col">Time</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Selasa malam</th>
+                <td>Latihan bersama</td>
+                <td>Balai Kota Surabaya</td>
+                <td>19.00 – 24.00 WIB</td>
+                <td><a class="btn btn-sm btn-outline-light" href="register.html">Ikut</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Jumat malam</th>
+                <td>Latihan bersama</td>
+                <td>Skatepark Monkasel</td>
+                <td>19.00 – 24.00 WIB</td>
+                <td><a class="btn btn-sm btn-outline-light" href="register.html">Ikut</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Minggu pagi</th>
+                <td>Latihan bersama</td>
+                <td>CFD Taman Bungkul</td>
+                <td>06.00 – 09.00 WIB</td>
+                <td><a class="btn btn-sm btn-outline-light" href="register.html">Ikut</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Beginner Friendly -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <h2 class="display-font">NEVER SKATED BEFORE?</h2>
+            <p>Tidak perlu mahir untuk bergabung. Kamu bisa mulai dari dasar dan belajar bersama anggota lain.</p>
+            <ul class="mb-0">
+              <li class="mb-2">Pemula sangat diterima.</li>
+              <li class="mb-2">Ikuti kegiatan sesuai kemampuanmu.</li>
+              <li>Perlengkapan dasar: sepatu roda dan alat pelindung (helm, pelindung lutut, siku, dan pergelangan tangan).</li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <div class="ph" role="img" aria-label="Sesi latihan santai bersama komunitas Zoo Street Skaters">
+              <img src="img/gallery/the_linnea.png" alt="Sesi latihan santai komunitas Zoo Street Skaters di Surabaya" width="547" height="562" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: CTA Band -->
+    <section class="section cta-band">
+      <div class="container">
+        <h2 class="display-font">MAU IKUT SESI?</h2>
+        <a class="btn btn-zss btn-lg" href="register.html">Daftar sekarang</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="zss-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <p class="display-font fs-2 mb-2">ROLL TOGETHER.<br>GROW TOGETHER.</p>
+          <p class="text-secondary">Komunitas inline skating di Surabaya, Indonesia.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="fs-6">Menu</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="fs-6">Hubungi kami</h2>
+          <ul class="list-unstyled">
+            <li><a href="https://www.instagram.com/zoostreetskaters">Instagram</a></li>
+            <li><a href="https://wa.me/085850131912">WhatsApp</a></li>
+            <li>Surabaya, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small text-secondary mt-4 mb-0">&copy; 2026 Zoo Street Skaters. Hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
