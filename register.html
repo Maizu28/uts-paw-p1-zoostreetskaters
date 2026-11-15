@@ -7,9 +7,10 @@
   <meta name="description" content="Pendaftaran anggota komunitas inline skating Zoo Street Skaters Surabaya.">
   <link rel="icon" type="image/png" href="img/logo/Logo_zoo_lama.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body data-bs-theme="dark">
@@ -49,102 +50,531 @@
     </nav>
   </header>
 
-  <main id="main">
-    <!-- Section 1: Page Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="display-font">JOIN THE SKATE COMMUNITY.</h1>
-        <p class="lead">Start your skating journey and become part of the Zoo Street Skaters community.</p>
-      </div>
-    </section>
+<main id="main">
+      <!-- Section 1: Register Hero -->
+      <section class="register-hero" aria-labelledby="register-hero-heading">
+        <div class="site-container">
+          <div class="register-hero-inner">
+            <span class="site-eyebrow">Pendaftaran Anggota Baru</span>
+            <h1 class="register-hero-title" id="register-hero-heading">
+              JOIN THE CREW. <span class="register-title-highlight">ROLL WITH US.</span>
+            </h1>
+            <p class="site-lead mb-0">
+              Daftarkan diri Anda untuk bergabung ke dalam keluarga besar Zoo Street Skaters Surabaya. Terbuka bagi siapa saja, dari pemula mutlak hingga skater berpengalaman. 100% gratis dan suportif!
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Section 2: Registration Layout (2-Column Grid) -->
-    <section class="section">
-      <div class="container">
-        <div class="row g-5">
-          <!-- Kolom 1 (Kiri): Area Form Pendaftaran (Dapat disesuaikan oleh Gansa) -->
-          <div class="col-lg-7">
-            <form action="terima-kasih.html" method="get">
-              <!-- Fieldset 1: Data Diri -->
-              <fieldset>
-                <legend class="h4 mb-3">Data Diri</legend>
-                <div class="mb-3">
-                  <label class="form-label" for="nama">Nama Lengkap</label>
-                  <input class="form-control" id="nama" name="nama" type="text" required autocomplete="name" placeholder="Masukkan nama lengkap">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="email">Alamat Email</label>
-                  <input class="form-control" id="email" name="email" type="email" required autocomplete="email" placeholder="nama@email.com">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="whatsapp">Nomor WhatsApp</label>
-                  <input class="form-control" id="whatsapp" name="whatsapp" type="tel" required autocomplete="tel" pattern="[0-9+ ]{9,15}" placeholder="08123456789">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="lahir">Tanggal Lahir</label>
-                  <input class="form-control" id="lahir" name="lahir" type="date" required>
-                </div>
-              </fieldset>
+      <!-- Section 2: Registration Form & Community Info Layout -->
+      <section class="site-section" aria-labelledby="form-heading">
+        <div class="site-container">
+          <div class="register-layout">
+            <!-- Main Column: Registration Form -->
+            <div class="register-card">
+              <header class="register-form-header">
+                <span class="site-eyebrow">Formulir Pendaftaran</span>
+                <h2 class="register-form-title" id="form-heading">Data Diri Anggota</h2>
+                <p class="text-muted mb-0">
+                  Lengkapi data di bawah ini untuk memudahkan koordinasi sesi latihan, coaching gratis, dan bergabung ke grup resmi WhatsApp komunitas.
+                </p>
+              </header>
 
-              <!-- Fieldset 2: Pengalaman & Preferensi Skating -->
-              <fieldset class="mt-4">
-                <legend class="h4 mb-3">Tentang Skating-mu</legend>
-                <div class="mb-3">
-                  <label class="form-label" for="level">Tingkat Kemampuan</label>
-                  <select class="form-select" id="level" name="level" required>
-                    <option value="">Pilih salah satu</option>
-                    <option value="beginner">Beginner (Pemula / Baru belajar)</option>
-                    <option value="intermediate">Intermediate (Sudah lancar meluncur)</option>
-                    <option value="advanced">Advanced (Terbiasa trik / slalom)</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="keanggotaan">Jenis Keanggotaan</label>
-                  <select class="form-select" id="keanggotaan" name="keanggotaan" required>
-                    <option value="">Pilih salah satu</option>
-                    <option value="anggota">Anggota Komunitas Aktif</option>
-                    <option value="tamu">Ikut Sesi sebagai Tamu</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="aktivitas">Aktivitas yang Diminati</label>
-                  <select class="form-select" id="aktivitas" name="aktivitas" required>
-                    <option value="">Pilih salah satu</option>
-                    <option value="freestyle">Freestyle Slalom</option>
-                    <option value="urban">Urban Skating</option>
-                    <option value="skatepark">Skate Park</option>
-                    <option value="gathering">Community Gathering</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label class="form-label" for="pesan">Pengalaman atau Pesan Tambahan</label>
-                  <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Ceritakan pengalaman bermain sepatu roda atau pertanyaan yang ingin disampaikan..."></textarea>
-                </div>
-              </fieldset>
+              <form class="register-form" action="terima-kasih.html" method="get">
+                <!-- Fieldset 1: Identitas Pribadi -->
+                <fieldset class="register-fieldset">
+                  <legend class="register-legend">1. Identitas Pribadi</legend>
 
-              <button class="btn btn-zss btn-lg mt-3" type="submit">Kirim Pendaftaran</button>
-            </form>
+                  <div class="register-grid-2col">
+                    <div class="register-field">
+                      <label for="reg-fullname" class="register-label">
+                        Nama Lengkap <span class="register-required" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="reg-fullname"
+                        name="fullname"
+                        class="register-input"
+                        placeholder="Contoh: Gansa Pratama"
+                        required
+                        autocomplete="name"
+                      />
+                    </div>
+
+                    <div class="register-field">
+                      <label for="reg-nickname" class="register-label">
+                        Nama Panggilan / Nickname
+                      </label>
+                      <input
+                        type="text"
+                        id="reg-nickname"
+                        name="nickname"
+                        class="register-input"
+                        placeholder="Contoh: Gansa"
+                        autocomplete="nickname"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="register-grid-2col">
+                    <div class="register-field">
+                      <label for="reg-email" class="register-label">
+                        Alamat Email <span class="register-required" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="reg-email"
+                        name="email"
+                        class="register-input"
+                        placeholder="nama@email.com"
+                        required
+                        autocomplete="email"
+                        aria-describedby="email-help"
+                      />
+                      <span id="email-help" class="register-help">
+                        Kami akan mengirimkan rincian konfirmasi pendaftaran ke alamat ini.
+                      </span>
+                    </div>
+
+                    <div class="register-field">
+                      <label for="reg-phone" class="register-label">
+                        Nomor WhatsApp / HP <span class="register-required" aria-hidden="true">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        id="reg-phone"
+                        name="phone"
+                        class="register-input"
+                        placeholder="Contoh: 081234567890"
+                        required
+                        pattern="[0-9]{10,15}"
+                        autocomplete="tel"
+                        aria-describedby="phone-help"
+                      />
+                      <span id="phone-help" class="register-help">
+                        Format angka 10-15 digit untuk dimasukkan ke grup koordinasi resmi.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="register-grid-2col">
+                    <div class="register-field">
+                      <label for="reg-age" class="register-label">
+                        Rentang Usia <span class="register-required" aria-hidden="true">*</span>
+                      </label>
+                      <select id="reg-age" name="age_range" class="register-select" required>
+                        <option value="">-- Pilih Rentang Usia --</option>
+                        <option value="under17">Di bawah 17 Tahun</option>
+                        <option value="17-25">17 - 25 Tahun</option>
+                        <option value="26-35">26 - 35 Tahun</option>
+                        <option value="above35">Di atas 35 Tahun</option>
+                      </select>
+                    </div>
+
+                    <div class="register-field">
+                      <label for="reg-domicile" class="register-label">
+                        Domisili Wilayah <span class="register-required" aria-hidden="true">*</span>
+                      </label>
+                      <select id="reg-domicile" name="domicile" class="register-select" required>
+                        <option value="">-- Pilih Wilayah Domisili --</option>
+                        <option value="surabaya-pusat">Surabaya Pusat</option>
+                        <option value="surabaya-timur">Surabaya Timur</option>
+                        <option value="surabaya-barat">Surabaya Barat</option>
+                        <option value="surabaya-selatan">Surabaya Selatan</option>
+                        <option value="surabaya-utara">Surabaya Utara</option>
+                        <option value="sidoarjo">Sidoarjo &amp; Sekitarnya</option>
+                        <option value="gresik">Gresik &amp; Sekitarnya</option>
+                        <option value="lainnya">Luar Wilayah Surabaya</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Pengalaman & Perlengkapan -->
+                <fieldset class="register-fieldset">
+                  <legend class="register-legend">2. Pengalaman &amp; Peminatan</legend>
+
+                  <div class="register-field">
+                    <label for="reg-level" class="register-label">
+                      Tingkat Pengalaman Bermain <span class="register-required" aria-hidden="true">*</span>
+                    </label>
+                    <select id="reg-level" name="experience_level" class="register-select" required>
+                      <option value="">-- Pilih Tingkat Pengalaman --</option>
+                      <option value="pemula-mutlak">Pemula Mutlak (Belum pernah berdiri di atas sepatu roda)</option>
+                      <option value="beginner">Beginner (Bisa meluncur lurus &amp; mengerem dasar)</option>
+                      <option value="intermediate">Intermediate (Lancar bermanuver, slalom dasar, &amp; aman di jalanan)</option>
+                      <option value="advanced">Advanced / Pro (Menguasai slide, ramp skatepark, atau kecepatan tinggi)</option>
+                    </select>
+                  </div>
+
+                  <div class="register-field">
+                    <label for="reg-discipline" class="register-label">
+                      Peminatan Disiplin Utama <span class="register-required" aria-hidden="true">*</span>
+                    </label>
+                    <select id="reg-discipline" name="primary_discipline" class="register-select" required>
+                      <option value="">-- Pilih Peminatan Disiplin --</option>
+                      <option value="urban-street">Urban Street Skating (City Roll Malam Surabaya)</option>
+                      <option value="freestyle-slalom">Freestyle Slalom &amp; Cone Drills</option>
+                      <option value="skatepark-aggressive">Skatepark, Ramp &amp; Aggressive</option>
+                      <option value="fitness-casual">Fitness &amp; Casual Rolling Santai</option>
+                    </select>
+                  </div>
+
+                  <div class="register-field">
+                    <span class="register-label">
+                      Status Perlengkapan Sepatu Roda <span class="register-required" aria-hidden="true">*</span>
+                    </span>
+                    <div class="register-choice-group" role="radiogroup" aria-label="Status Perlengkapan Sepatu Roda">
+                      <label class="register-choice-item" for="gear-full">
+                        <input
+                          type="radio"
+                          id="gear-full"
+                          name="gear_status"
+                          value="complete"
+                          class="register-choice-input"
+                          required
+                        />
+                        <span class="register-choice-text">
+                          <span class="register-choice-title">Lengkap &amp; Siap Meluncur</span>
+                          <span class="register-choice-desc">Sudah memiliki sepatu roda dan paket safety gear lengkap (helm, wrist guard, knee pad).</span>
+                        </span>
+                      </label>
+
+                      <label class="register-choice-item" for="gear-skate-only">
+                        <input
+                          type="radio"
+                          id="gear-skate-only"
+                          name="gear_status"
+                          value="skate-only"
+                          class="register-choice-input"
+                        />
+                        <span class="register-choice-text">
+                          <span class="register-choice-title">Hanya Sepatu Roda</span>
+                          <span class="register-choice-desc">Punya sepatu roda, namun belum memiliki safety gear pelindung lengkap.</span>
+                        </span>
+                      </label>
+
+                      <label class="register-choice-item" for="gear-none">
+                        <input
+                          type="radio"
+                          id="gear-none"
+                          name="gear_status"
+                          value="need-gear"
+                          class="register-choice-input"
+                        />
+                        <span class="register-choice-text">
+                          <span class="register-choice-title">Belum Memiliki Sepatu Roda</span>
+                          <span class="register-choice-desc">Ingin bergabung untuk belajar terlebih dahulu atau membutuhkan rekomendasi pembelian/sewa.</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="register-field">
+                    <label for="reg-shoesize" class="register-label">
+                      Ukuran Sepatu (EU) <span class="text-muted">(Opsional, untuk kebutuhan pendataan gear/sewa)</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="reg-shoesize"
+                      name="shoesize"
+                      class="register-input"
+                      min="28"
+                      max="48"
+                      placeholder="Contoh: 41"
+                    />
+                  </div>
+                </fieldset>
+
+                <!-- Fieldset 3: Motivasi & Komitmen -->
+                <fieldset class="register-fieldset">
+                  <legend class="register-legend">3. Motivasi &amp; Komitmen</legend>
+
+                  <div class="register-field">
+                    <label for="reg-notes" class="register-label">
+                      Motivasi / Harapan Bergabung <span class="text-muted">(Opsional)</span>
+                    </label>
+                    <textarea
+                      id="reg-notes"
+                      name="notes"
+                      class="register-textarea"
+                      placeholder="Ceritakan mengapa Anda tertarik bergabung atau apa yang ingin Anda latih bersama tim..."
+                    ></textarea>
+                  </div>
+
+                  <div class="register-agree-box">
+                    <label class="register-agree-label" for="reg-agree">
+                      <input
+                        type="checkbox"
+                        id="reg-agree"
+                        name="agree_terms"
+                        class="register-choice-input"
+                        required
+                      />
+                      <span>
+                        Saya bersedia mematuhi <strong>standar keselamatan jalanan</strong> (wajib mengenakan helm &amp; pelindung saat sesi outdoor), menghormati sesama skater tanpa senioritas, serta menjaga etika dan fasilitas umum di Kota Surabaya. <span class="register-required" aria-hidden="true">*</span>
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- Submit & Reset Buttons -->
+                <div class="register-actions">
+                  <button type="submit" class="btn site-btn site-btn-primary register-submit-btn">
+                    KIRIM PENDAFTARAN <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                  </button>
+                  <button type="reset" class="btn site-btn site-btn-secondary">
+                    RESET FORM
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Sidebar Column: Community Info & Perks -->
+            <aside class="register-info-panel" aria-label="Informasi dan Benefit Komunitas">
+              <div class="register-info-card register-info-card-accent">
+                <span class="site-eyebrow">Mengapa Bergabung?</span>
+                <h3 class="register-info-title">
+                  <i class="bi bi-award-fill register-info-icon" aria-hidden="true"></i>
+                  Benefit Anggota
+                </h3>
+                <ul class="register-perks-list">
+                  <li class="register-perk-item">
+                    <i class="bi bi-check2-circle register-perk-icon" aria-hidden="true"></i>
+                    <span><strong>Free Coaching Berkala:</strong> Sesi bimbingan teknik dasar dan lanjutan gratis dari skater senior tiap Sabtu.</span>
+                  </li>
+                  <li class="register-perk-item">
+                    <i class="bi bi-check2-circle register-perk-icon" aria-hidden="true"></i>
+                    <span><strong>Akses Rute City Roll Terkawal:</strong> Meluncur malam hari mengelilingi Surabaya secara aman bersama tim marshall.</span>
+                  </li>
+                  <li class="register-perk-item">
+                    <i class="bi bi-check2-circle register-perk-icon" aria-hidden="true"></i>
+                    <span><strong>Diskon Mitra Skate Shop:</strong> Potongan harga khusus sparepart roda, bearing, dan gear dari rekanan komunitas.</span>
+                  </li>
+                  <li class="register-perk-item">
+                    <i class="bi bi-check2-circle register-perk-icon" aria-hidden="true"></i>
+                    <span><strong>Lingkungan Bebas Senioritas:</strong> Ruang positif untuk semua skater tanpa memandang usia atau level sepatu roda.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="register-info-card">
+                <span class="site-eyebrow">Agenda Rutin</span>
+                <h3 class="register-info-title">
+                  <i class="bi bi-calendar-event-fill register-info-icon" aria-hidden="true"></i>
+                  Jadwal Latihan
+                </h3>
+                <p class="text-muted small">
+                  Jadwal reguler latihan komunitas di Surabaya:
+                </p>
+                <div class="register-schedule-box">
+                  <div class="register-schedule-item">
+                    <div>
+                      <span class="register-schedule-day">Jumat Malam</span>
+                      <p class="text-muted small mb-0">City Roll Night Skate (Tunjungan / Balai Pemuda)</p>
+                    </div>
+                    <span class="register-schedule-time">19.30 WIB</span>
+                  </div>
+
+                  <div class="register-schedule-item">
+                    <div>
+                      <span class="register-schedule-day">Sabtu Sore</span>
+                      <p class="text-muted small mb-0">Slalom &amp; Beginner Coaching (Park Ketabang)</p>
+                    </div>
+                    <span class="register-schedule-time">16.00 WIB</span>
+                  </div>
+
+                  <div class="register-schedule-item">
+                    <div>
+                      <span class="register-schedule-day">Minggu Pagi</span>
+                      <p class="text-muted small mb-0">Sunday Roll / Car Free Day (Darmo - KBS)</p>
+                    </div>
+                    <span class="register-schedule-time">06.00 WIB</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="register-info-card">
+                <span class="site-eyebrow">Pusat Bantuan</span>
+                <h3 class="register-info-title">
+                  <i class="bi bi-chat-dots-fill register-info-icon" aria-hidden="true"></i>
+                  Butuh Bantuan?
+                </h3>
+                <p class="text-muted small mb-3">
+                  Punya pertanyaan seputar ukuran sepatu atau pemilihan gear sebelum mendaftar? Hubungi pengurus kami:
+                </p>
+                <a class="btn site-btn site-btn-secondary w-100" href="about.html">
+                  TENTANG KAMI <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </aside>
           </div>
 
-          <!-- Kolom 2 (Kanan): Informasi & Panduan Pendaftaran -->
-          <div class="col-lg-5">
-            <div class="zss-info-card">
-              <h2 class="h4 mb-3">Informasi Pendaftaran</h2>
-              <ul class="mb-4">
-                <li class="mb-2">Terbuka untuk semua usia dan tingkat kemahiran (dari pemula hingga pro).</li>
-                <li class="mb-2">Datang ke salah satu sesi mingguan kami (lihat <a href="activities.html">jadwal sesi</a>).</li>
-                <li class="mb-2">Siapkan sepatu roda inline pribadi dan alat pelindung diri (helm, deker lutut, siku, pergelangan tangan).</li>
-                <li class="mb-2">Ada pertanyaan? Hubungi kami lewat <a href="https://wa.me/">WhatsApp</a> atau <a href="https://www.instagram.com/">Instagram</a>.</li>
-              </ul>
-              <p class="small text-secondary mb-0">
-                Formulir ini berfungsi sebagai frontend demonstration dan terhubung langsung ke halaman konfirmasi setelah tombol kirim ditekan.
+          <!-- Section 3: Frequently Asked Questions (FAQ) with Accessible Bootstrap Accordion -->
+          <div class="register-faq-section">
+            <div class="register-faq-header">
+              <span class="site-eyebrow">Tanya Jawab Komunitas</span>
+              <h2 class="register-faq-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS.</h2>
+              <p class="site-lead mx-auto mb-0">
+                Pertanyaan yang paling sering diajukan oleh calon skater seputar pendaftaran, perlengkapan, dan kegiatan rutin Zoo Street Skaters.
               </p>
+            </div>
+
+            <div class="register-faq-accordion accordion" id="faqAccordion">
+              <!-- FAQ Item 1 -->
+              <div class="register-faq-item accordion-item">
+                <h3 class="accordion-header" id="faq-h-1">
+                  <button
+                    class="register-faq-button accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-c-1"
+                    aria-expanded="false"
+                    aria-controls="faq-c-1"
+                  >
+                    <span>Apakah pendaftaran dan sesi latihan dipungut biaya?</span>
+                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faq-c-1"
+                  class="accordion-collapse collapse"
+                  role="region"
+                  aria-labelledby="faq-h-1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="register-faq-body accordion-body">
+                    <p>
+                      <strong>Sama sekali tidak ada biaya pendaftaran (100% Gratis).</strong> Zoo Street Skaters adalah komunitas terbuka yang berlandaskan asas kebersamaan dan kecintaan terhadap olahraga sepatu roda. Anda hanya perlu membawa sepatu roda dan safety gear milik sendiri saat mengikuti sesi latihan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="register-faq-item accordion-item">
+                <h3 class="accordion-header" id="faq-h-2">
+                  <button
+                    class="register-faq-button accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-c-2"
+                    aria-expanded="false"
+                    aria-controls="faq-c-2"
+                  >
+                    <span>Saya belum bisa meluncur sama sekali, apakah boleh bergabung?</span>
+                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faq-c-2"
+                  class="accordion-collapse collapse"
+                  role="region"
+                  aria-labelledby="faq-h-2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="register-faq-body accordion-body">
+                    <p>
+                      <strong>Sangat boleh!</strong> Kami menyediakan program bimbingan teknik dasar (Basic Coaching) ramah pemula setiap Sabtu sore di Skatepark Ketabang. Teman-teman skater berpengalaman akan memandu Anda mulai dari teknik berdiri, meluncur lurus, menjaga postur, hingga cara berhenti (braking) secara aman.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="register-faq-item accordion-item">
+                <h3 class="accordion-header" id="faq-h-3">
+                  <button
+                    class="register-faq-button accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-c-3"
+                    aria-expanded="false"
+                    aria-controls="faq-c-3"
+                  >
+                    <span>Perlengkapan apa saja yang wajib dibawa saat latihan?</span>
+                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faq-c-3"
+                  class="accordion-collapse collapse"
+                  role="region"
+                  aria-labelledby="faq-h-3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="register-faq-body accordion-body">
+                    <p>
+                      Untuk keselamatan bersama, perlengkapan yang sangat dianjurkan adalah <strong>sepatu roda inline skate</strong>, <strong>helm</strong>, serta <strong>tiga pelindung utama (wrist guard, elbow pad, dan knee pad)</strong>. Khusus untuk sesi City Roll malam hari di jalan raya, lampu reflektor atau helm berlampu sangat disarankan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="register-faq-item accordion-item">
+                <h3 class="accordion-header" id="faq-h-4">
+                  <button
+                    class="register-faq-button accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-c-4"
+                    aria-expanded="false"
+                    aria-controls="faq-c-4"
+                  >
+                    <span>Bagaimana alur setelah formulir pendaftaran ini dikirim?</span>
+                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faq-c-4"
+                  class="accordion-collapse collapse"
+                  role="region"
+                  aria-labelledby="faq-h-4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="register-faq-body accordion-body">
+                    <p>
+                      Setelah menekan tombol <em>Kirim Pendaftaran</em>, Anda akan dialihkan ke halaman <a class="site-inline-link" href="terima-kasih.html">Konfirmasi Terima Kasih</a>. Pengurus komunitas kami akan memverifikasi nomor WhatsApp Anda dalam waktu 1x24 jam untuk mengirimkan tautan grup WhatsApp resmi dan info sesi latihan terdekat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="register-faq-item accordion-item">
+                <h3 class="accordion-header" id="faq-h-5">
+                  <button
+                    class="register-faq-button accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-c-5"
+                    aria-expanded="false"
+                    aria-controls="faq-c-5"
+                  >
+                    <span>Apakah ada batasan usia untuk menjadi anggota?</span>
+                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faq-c-5"
+                  class="accordion-collapse collapse"
+                  role="region"
+                  aria-labelledby="faq-h-5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="register-faq-body accordion-body">
+                    <p>
+                      <strong>Tidak ada batasan usia.</strong> Anggota komunitas kami beragam mulai dari pelajar, mahasiswa, hingga pekerja dan master skater usia 40-an tahun. Bagi anggota yang berusia di bawah 17 tahun, kami menyarankan didampingi oleh orang tua atau wali selama sesi meluncur di jalanan umum.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
   <!-- Global Footer -->
   <footer class="zss-footer">
@@ -167,8 +597,8 @@
         <div class="col-6 col-md-4">
           <h2 class="fs-6">Hubungi kami</h2>
           <ul class="list-unstyled">
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://wa.me/">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/zoostreetskaters">Instagram</a></li>
+            <li><a href="https://wa.me/085850131912">WhatsApp</a></li>
             <li>Surabaya, Indonesia</li>
           </ul>
         </div>
