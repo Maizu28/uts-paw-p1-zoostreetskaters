@@ -1060,11 +1060,501 @@ a {
 }
 
 /* ==========================================================================
-   7. REGISTER — GANSA
+   7. REGISTER — GANSA (.register-*)
    Catatan Kontrak: Gansa menambahkan styling khusus register.html di sini.
    Gunakan prefix class .register-* dan hindari ID selector / !important.
    ========================================================================== */
+
+/* Hero Banner Halaman Registrasi */
+.register-hero {
+  position: relative;
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+  padding-block: var(--space-12) var(--space-16);
+  overflow: hidden;
+}
+
+.register-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 50rem;
+}
+
+.register-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.register-title-highlight {
+  color: var(--color-skate-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon-pink);
+  text-underline-offset: var(--space-2);
+}
+
+/* Layout Utama Form & Sidebar Info */
+.register-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* Kartu Form Pendaftaran */
+.register-card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.register-thanks-card {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.register-form-header {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.register-form-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+}
+
+/* Fieldset & Form Groups */
+.register-fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  background-color: var(--color-surface-elevated);
+}
+
+.register-legend {
+  float: none;
+  width: auto;
+  padding-inline: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-skate-yellow);
+  margin-bottom: 0;
+}
+
+.register-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.register-field:last-child {
+  margin-bottom: 0;
+}
+
+.register-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-pure-white);
+  letter-spacing: 0.02em;
+}
+
+.register-required {
+  color: var(--color-neon-pink);
+  font-weight: 700;
+}
+
+/* Form Controls (Inputs, Select, Textarea) */
+.register-input,
+.register-select,
+.register-textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-pure-white);
+  background-color: var(--color-ink-black);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.register-input:focus,
+.register-select:focus,
+.register-textarea:focus {
+  outline: none;
+  background-color: var(--color-surface);
+  border-color: var(--color-street-purple-tint);
+  box-shadow: 0 0 0 3px rgba(150, 59, 206, 0.35);
+  color: var(--color-pure-white);
+}
+
+.register-input::placeholder,
+.register-textarea::placeholder {
+  color: var(--color-muted-text);
+  opacity: 0.65;
+}
+
+.register-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f6ca38' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  background-size: 16px 12px;
+  padding-right: var(--space-10);
+  appearance: none;
+}
+
+.register-select option {
+  background-color: var(--color-ink-black);
+  color: var(--color-pure-white);
+}
+
+.register-textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* Helper Text */
+.register-help {
+  font-size: var(--text-xs);
+  color: var(--color-muted-text);
+  line-height: 1.4;
+}
+
+/* Radio & Checkbox Groups */
+.register-choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.register-choice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background-color: var(--color-ink-black);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.register-choice-item:hover {
+  border-color: var(--color-street-purple);
+  background-color: var(--color-concrete);
+}
+
+.register-choice-input {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all var(--transition-fast);
+}
+
+.register-choice-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.register-choice-input:checked {
+  background-color: var(--color-street-purple);
+  border-color: var(--color-street-purple-tint);
+}
+
+.register-choice-input[type="checkbox"]:checked::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.35rem;
+  border-left: 2px solid var(--color-pure-white);
+  border-bottom: 2px solid var(--color-pure-white);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.register-choice-input[type="radio"]:checked::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-pure-white);
+}
+
+.register-choice-input:focus-visible {
+  outline: 2px solid var(--color-skate-yellow);
+  outline-offset: 2px;
+}
+
+.register-choice-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.register-choice-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-pure-white);
+}
+
+.register-choice-desc {
+  font-size: var(--text-xs);
+  color: var(--color-muted-text);
+  line-height: 1.35;
+}
+
+/* Agreement Checkbox Box */
+.register-agree-box {
+  background-color: var(--color-surface-elevated);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.register-agree-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-muted-text);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.register-agree-label strong {
+  color: var(--color-pure-white);
+}
+
+/* Submit Actions */
+.register-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.register-submit-btn {
+  width: 100%;
+  padding-block: var(--space-4);
+  font-size: var(--text-base);
+}
+
+/* Sidebar Info Panel */
+.register-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.register-info-card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.register-info-card-accent {
+  border-color: var(--color-street-purple);
+  background-color: var(--color-surface-elevated);
+}
+
+.register-info-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-pure-white);
+  text-transform: uppercase;
+}
+
+.register-info-icon {
+  color: var(--color-skate-yellow);
+  font-size: 1.5rem;
+}
+
+.register-perks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.register-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-muted-text);
+}
+
+.register-perk-icon {
+  color: var(--color-neon-pink);
+  font-size: 1.15rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.register-schedule-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.register-schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-ink-black);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-skate-yellow);
+}
+
+.register-schedule-day {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-pure-white);
+}
+
+.register-schedule-time {
+  font-size: var(--text-xs);
+  color: var(--color-skate-yellow);
+  font-weight: 600;
+}
+
+/* FAQ Section */
+.register-faq-section {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 2px solid var(--color-border);
+}
+
+.register-faq-header {
+  margin-bottom: var(--space-10);
+  text-align: center;
+}
+
+.register-faq-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.register-faq-accordion {
+  max-width: 52rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.register-faq-item {
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.register-faq-item:hover {
+  border-color: var(--color-street-purple);
+}
+
+.register-faq-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface);
+  color: var(--color-pure-white);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.register-faq-button:hover,
+.register-faq-button:focus-visible {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-skate-yellow);
+  outline: none;
+}
+
+.register-faq-button[aria-expanded="true"] {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-skate-yellow);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.register-faq-icon {
+  font-size: 1.25rem;
+  color: var(--color-street-purple-tint);
+  transition: transform var(--transition-fast);
+}
+
+.register-faq-button[aria-expanded="true"] .register-faq-icon {
+  transform: rotate(180deg);
+  color: var(--color-neon-pink);
+}
+
+.register-faq-body {
+  padding: var(--space-6);
+  background-color: var(--color-surface-elevated);
+  color: var(--color-muted-text);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.register-faq-body p:last-child {
+  margin-bottom: 0;
+}
 /* ==========================================================================
+
+
    8. About — Gansa (.about-*)
    ========================================================================== */
 /* Hero Banner bergaya Urban Skatepark (Junction 4 Vibe) */
@@ -1312,11 +1802,7 @@ a {
     font-size: 3.25rem;
   }
 }
-/* ==========================================================================
-   8. ABOUT — GANSA
-   Catatan Kontrak: Gansa menambahkan styling khusus about.html di sini.
-   Gunakan prefix class .about-* dan hindari ID selector / !important.
-   ========================================================================== */
+
 
 /* ==========================================================================
    9. GALLERY — RIVAN
@@ -1526,6 +2012,21 @@ a {
     align-items: center;
     justify-content: space-between;
   }
+
+  .register-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .register-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-submit-btn {
+    width: auto;
+    min-width: 15rem;
+  }
 }
 
 /* Desktop: >= 64rem (1024px) */
@@ -1610,6 +2111,15 @@ a {
   .site-footer-grid {
     grid-template-columns: 2fr 1fr 1fr;
     gap: var(--space-12);
+  }
+
+  .register-layout {
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: var(--space-12);
+  }
+
+  .register-card {
+    padding: var(--space-10);
   }
 }
 
