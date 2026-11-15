@@ -1064,7 +1064,223 @@ a {
    Catatan Kontrak: Gansa menambahkan styling khusus register.html di sini.
    Gunakan prefix class .register-* dan hindari ID selector / !important.
    ========================================================================== */
+/* ==========================================================================
+   8. About — Gansa (.about-*)
+   ========================================================================== */
+/* Hero Banner bergaya Urban Skatepark (Junction 4 Vibe) */
+.about-hero {
+  position: relative;
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-border);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  overflow: hidden;
+}
 
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  line-height: 1.05;
+  margin-bottom: var(--space-5);
+  text-transform: uppercase;
+}
+
+.about-title-highlight {
+  color: var(--color-skate-yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon-pink);
+  text-underline-offset: var(--space-2);
+}
+
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+/* Statistik Komunitas */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.about-stat-card {
+  background-color: var(--color-ink-black);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.about-stat-card:hover {
+  border-color: var(--color-skate-yellow);
+  transform: translateY(-4px);
+}
+
+.about-stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-neon-pink);
+  margin-bottom: var(--space-2);
+}
+
+.about-stat-label {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-pure-white);
+}
+
+/* Bagian Cerita & Visi Misi */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.about-panel {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.about-panel-accent {
+  border-left: var(--space-2) solid var(--color-street-purple);
+}
+
+.about-section-title {
+  font-size: 1.875rem;
+  margin-bottom: var(--space-4);
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-muted-text);
+}
+
+.about-list-icon {
+  color: var(--color-skate-yellow);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Nilai & Kultur Komunitas (Pillar Cards) */
+.about-section-header {
+  margin-bottom: var(--space-10);
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.about-value-card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.about-value-card:hover {
+  border-color: var(--color-street-purple);
+  transform: translateY(-4px);
+}
+
+.about-value-icon {
+  width: var(--space-12);
+  height: var(--space-12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-concrete);
+  color: var(--color-skate-yellow);
+  border-radius: var(--radius-sm);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-5);
+}
+
+.about-value-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3);
+}
+
+/* Divisi / Disiplin Skate (Junction 4 Facility Card Style) */
+.about-disciplines-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.about-discipline-card {
+  background-color: var(--color-concrete);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-discipline-tag {
+  align-self: flex-start;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--color-ink-black);
+  color: var(--color-neon-pink);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+/* Call to Action Banner */
+.about-cta-banner {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-street-purple);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.about-cta-title {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+}
 /* ==========================================================================
    8. ABOUT — GANSA
    Catatan Kontrak: Gansa menambahkan styling khusus about.html di sini.
