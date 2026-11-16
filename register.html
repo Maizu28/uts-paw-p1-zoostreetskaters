@@ -4,13 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Register | Zoo Street Skaters</title>
-  <meta name="description" content="Pendaftaran anggota komunitas inline skating Zoo Street Skaters Surabaya.">
+  <meta name="description" content="Zoo Street Skaters: komunitas inline skating di Surabaya. Roll together. Grow together.">
   <link rel="icon" type="image/png" href="img/logo/Logo_zoo_lama.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body data-bs-theme="dark">
@@ -50,311 +49,40 @@
     </nav>
   </header>
 
-<main id="main">
-      <!-- Section 1: Hero -->
-      <section class="page-hero">
-        <div class="container">
-          <h1 class="display-font">GASS GABUNG. ROLL BARENG KAMI!</h1>
-          <p class="lead">
-            Gak perlu jago dulu buat gabung Zoo Street Skaters. Komunitas ini terbuka buat siapa aja di Surabaya—dari yang baru pertama kali pegang sepatu roda sampai yang udah lancar meluncur. 100% gratis, santai, dan saling support!
-          </p>
-        </div>
-      </section>
+  <main id="main">
+    <!-- Section 1: Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="display-font">JOIN THE SKATE COMMUNITY.</h1>
+        <p class="lead">Start your skating journey and become part of the Zoo Street Skaters community. Cukup kirim pesan pribadi (DM) lewat Instagram.</p>
+        <a class="btn btn-zss btn-lg mt-3" href="https://ig.me/m/zoostreetskaters" target="_blank" rel="noopener">Chat via Instagram DM</a>
+      </div>
+    </section>
 
-      <!-- Section 2: Registration Form & Community Info Layout -->
-      <section class="site-section" aria-labelledby="form-heading">
-        <div class="site-container">
-          <!-- Opsi Pendaftaran Langsung via Bar WhatsApp & Instagram -->
-          <div class="register-connect-bar">
-            <div class="register-connect-bar-info">
-              <span class="register-connect-bar-badge">
-                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Fast Track
-              </span>
-              <p class="register-connect-bar-text mb-0">
-                Mau langsung gabung tanpa isi form? Chat admin via WhatsApp atau DM Instagram:
-              </p>
-            </div>
-            <div class="register-connect-bar-actions">
-              <a
-                class="register-bar-btn register-bar-btn-wa"
-                href="https://wa.me/6285850131912?text=Halo%20min,%20mau%20gabung%20Zoo%20Street%20Skaters!"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
-              </a>
-              <a
-                class="register-bar-btn register-bar-btn-ig"
-                href="https://www.instagram.com/zoostreetskaters"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
-              </a>
-            </div>
+    <!-- Section 2: How to Join -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <h2 class="display-font mb-4">CARA BERGABUNG</h2>
+            <ol class="join-steps">
+              <li><strong>Kirim DM</strong> ke Instagram <a href="https://www.instagram.com/zoostreetskaters/" target="_blank" rel="noopener">@zoostreetskaters</a>.</li>
+              <li><strong>Perkenalkan dirimu</strong> dan tanyakan jadwal sesi terbaru.</li>
+              <li><strong>Datang ke sesi</strong> pilihanmu. Pemula sangat diterima, dan kamu bisa mencoba sepatu roda dulu sebelum membeli.</li>
+            </ol>
           </div>
-
-          <!-- Divider -->
-          <div class="register-direct-divider">
-            <span>Atau Tinggalkan Kontak Kamu</span>
-          </div>
-
-          <div class="register-layout">
-            <!-- Main Column: Formulir Cepat -->
-            <div class="register-card">
-              <header class="register-form-header">
-                <span class="site-eyebrow">Form Cepat</span>
-                <h2 class="register-form-title" id="form-heading">Biar Kami yang Hubungi</h2>
-                <p class="text-muted mb-0">
-                  Tulis nama dan nomor WA kamu di bawah. Mimin bakal kabari kamu sebelum jadwal latihan berikutnya dimulai.
-                </p>
-              </header>
-
-              <form class="register-form" action="terima-kasih.html" method="get">
-                <div class="register-field">
-                  <label for="reg-fullname" class="register-label">
-                    Nama / Panggilan <span class="register-required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="reg-fullname"
-                    name="fullname"
-                    class="register-input"
-                    placeholder="Contoh: Gansa"
-                    required
-                    autocomplete="name"
-                  />
-                </div>
-
-                <div class="register-field">
-                  <label for="reg-phone" class="register-label">
-                    Nomor WhatsApp <span class="register-required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="reg-phone"
-                    name="phone"
-                    class="register-input"
-                    placeholder="Contoh: 081234567890"
-                    required
-                    pattern="[0-9]{10,15}"
-                    autocomplete="tel"
-                    aria-describedby="phone-help"
-                  />
-                  <span id="phone-help" class="register-help">
-                    Nomor aktif WhatsApp buat dikirimi link grup mabar.
-                  </span>
-                </div>
-
-                <div class="register-field">
-                  <label for="reg-discipline" class="register-label">
-                    Tertarik Ikut Sesi Apa?
-                  </label>
-                  <select id="reg-discipline" name="primary_discipline" class="register-select">
-                    <option value="urban-street">Urban Street Skating (City Roll Surabaya)</option>
-                    <option value="pemula-coaching">Pemula (Belajar dari Nol / Coaching)</option>
-                    <option value="freestyle-slalom">Freestyle Slalom &amp; Cone Drills</option>
-                    <option value="skatepark-ramp">Skatepark &amp; Ramp Ketabang</option>
-                  </select>
-                </div>
-
-                <div class="register-agree-box">
-                  <label class="register-agree-label" for="reg-agree">
-                    <input
-                      type="checkbox"
-                      id="reg-agree"
-                      name="agree_terms"
-                      class="register-choice-input"
-                      required
-                    />
-                    <span>
-                      Saya setuju dihubungi admin via WhatsApp dan siap main bareng dengan saling menjaga keselamatan dan etika di jalan. <span class="register-required" aria-hidden="true">*</span>
-                    </span>
-                  </label>
-                </div>
-
-                <div class="register-actions">
-                  <button type="submit" class="btn site-btn site-btn-primary register-submit-btn">
-                    KIRIM KONTAK <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-                  </button>
-                  <a
-                    class="btn site-btn site-btn-secondary"
-                    href="https://wa.me/6285850131912?text=Halo%20min,%20saya%20mau%20gabung%20Zoo%20Street%20Skaters%20Surabaya!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i class="bi bi-whatsapp" aria-hidden="true"></i> LANGSUNG WA AJA
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- Section 3: Frequently Asked Questions (FAQ) with Accessible Bootstrap Accordion -->
-          <div class="register-faq-section">
-            <div class="register-faq-header">
-              <span class="site-eyebrow">Tanya Jawab Komunitas</span>
-              <h2 class="register-faq-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS.</h2>
-              <p class="site-lead mx-auto mb-0">
-                Pertanyaan yang paling sering diajukan oleh calon skater seputar pendaftaran, perlengkapan, dan kegiatan rutin Zoo Street Skaters.
-              </p>
-            </div>
-
-            <div class="register-faq-accordion accordion" id="faqAccordion">
-              <!-- FAQ Item 1 -->
-              <div class="register-faq-item accordion-item">
-                <h3 class="accordion-header" id="faq-h-1">
-                  <button
-                    class="register-faq-button accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-c-1"
-                    aria-expanded="false"
-                    aria-controls="faq-c-1"
-                  >
-                    <span>Apakah pendaftaran dan sesi latihan dipungut biaya?</span>
-                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
-                  </button>
-                </h3>
-                <div
-                  id="faq-c-1"
-                  class="accordion-collapse collapse"
-                  role="region"
-                  aria-labelledby="faq-h-1"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="register-faq-body accordion-body">
-                    <p>
-                      <strong>Sama sekali tidak ada biaya pendaftaran (100% Gratis).</strong> Zoo Street Skaters adalah komunitas terbuka yang berlandaskan asas kebersamaan dan kecintaan terhadap olahraga sepatu roda. Anda hanya perlu membawa sepatu roda dan safety gear milik sendiri saat mengikuti sesi latihan.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ Item 2 -->
-              <div class="register-faq-item accordion-item">
-                <h3 class="accordion-header" id="faq-h-2">
-                  <button
-                    class="register-faq-button accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-c-2"
-                    aria-expanded="false"
-                    aria-controls="faq-c-2"
-                  >
-                    <span>Saya belum bisa meluncur sama sekali, apakah boleh bergabung?</span>
-                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
-                  </button>
-                </h3>
-                <div
-                  id="faq-c-2"
-                  class="accordion-collapse collapse"
-                  role="region"
-                  aria-labelledby="faq-h-2"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="register-faq-body accordion-body">
-                    <p>
-                      <strong>Sangat boleh!</strong> Kami menyediakan program bimbingan teknik dasar (Basic Coaching) ramah pemula setiap Sabtu sore di Skatepark Ketabang. Teman-teman skater berpengalaman akan memandu Anda mulai dari teknik berdiri, meluncur lurus, menjaga postur, hingga cara berhenti (braking) secara aman.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ Item 3 -->
-              <div class="register-faq-item accordion-item">
-                <h3 class="accordion-header" id="faq-h-3">
-                  <button
-                    class="register-faq-button accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-c-3"
-                    aria-expanded="false"
-                    aria-controls="faq-c-3"
-                  >
-                    <span>Perlengkapan apa saja yang wajib dibawa saat latihan?</span>
-                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
-                  </button>
-                </h3>
-                <div
-                  id="faq-c-3"
-                  class="accordion-collapse collapse"
-                  role="region"
-                  aria-labelledby="faq-h-3"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="register-faq-body accordion-body">
-                    <p>
-                      Untuk keselamatan bersama, perlengkapan yang sangat dianjurkan adalah <strong>sepatu roda inline skate</strong>, <strong>helm</strong>, serta <strong>tiga pelindung utama (wrist guard, elbow pad, dan knee pad)</strong>. Khusus untuk sesi City Roll malam hari di jalan raya, lampu reflektor atau helm berlampu sangat disarankan.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ Item 4 -->
-              <div class="register-faq-item accordion-item">
-                <h3 class="accordion-header" id="faq-h-4">
-                  <button
-                    class="register-faq-button accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-c-4"
-                    aria-expanded="false"
-                    aria-controls="faq-c-4"
-                  >
-                    <span>Bagaimana alur setelah formulir pendaftaran ini dikirim?</span>
-                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
-                  </button>
-                </h3>
-                <div
-                  id="faq-c-4"
-                  class="accordion-collapse collapse"
-                  role="region"
-                  aria-labelledby="faq-h-4"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="register-faq-body accordion-body">
-                    <p>
-                      Setelah menekan tombol <em>Kirim Pendaftaran</em>, Anda akan dialihkan ke halaman <a class="site-inline-link" href="terima-kasih.html">Konfirmasi Terima Kasih</a>. Pengurus komunitas kami akan memverifikasi nomor WhatsApp Anda dalam waktu 1x24 jam untuk mengirimkan tautan grup WhatsApp resmi dan info sesi latihan terdekat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ Item 5 -->
-              <div class="register-faq-item accordion-item">
-                <h3 class="accordion-header" id="faq-h-5">
-                  <button
-                    class="register-faq-button accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq-c-5"
-                    aria-expanded="false"
-                    aria-controls="faq-c-5"
-                  >
-                    <span>Apakah ada batasan usia untuk menjadi anggota?</span>
-                    <i class="bi bi-chevron-down register-faq-icon" aria-hidden="true"></i>
-                  </button>
-                </h3>
-                <div
-                  id="faq-c-5"
-                  class="accordion-collapse collapse"
-                  role="region"
-                  aria-labelledby="faq-h-5"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="register-faq-body accordion-body">
-                    <p>
-                      <strong>Tidak ada batasan usia.</strong> Anggota komunitas kami beragam mulai dari pelajar, mahasiswa, hingga pekerja dan master skater usia 40-an tahun. Bagi anggota yang berusia di bawah 17 tahun, kami menyarankan didampingi oleh orang tua atau wali selama sesi meluncur di jalanan umum.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-lg-5">
+            <h2 class="h4">Perlu tahu</h2>
+            <ul>
+              <li>Terbuka untuk semua usia dan tingkat kemampuan.</li>
+              <li>Lihat hari dan lokasi di <a href="activities.html">halaman Activities</a>. Jam pelaksanaan dikonfirmasi lewat DM.</li>
+              <li>Tidak ada biaya atau formulir yang perlu diisi di website ini.</li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
   <!-- Global Footer -->
   <footer class="zss-footer">
@@ -377,7 +105,7 @@
         <div class="col-6 col-md-4">
           <h2 class="fs-6">Hubungi kami</h2>
           <ul class="list-unstyled">
-            <li><a href="https://www.instagram.com/zoostreetskaters">Instagram</a></li>
+            <li><a href="https://www.instagram.com/zoostreetskaters/">Instagram</a></li>
             <li><a href="https://wa.me/085850131912">WhatsApp</a></li>
             <li>Surabaya, Indonesia</li>
           </ul>
